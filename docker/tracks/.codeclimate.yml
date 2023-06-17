@@ -1,0 +1,34 @@
+version: "2"
+checks:
+  file-lines:
+    config:
+      threshold: 300
+  method-complexity:
+    config:
+      threshold: 50
+  method-count:
+    config:
+      threshold: 20
+  method-lines:
+    config:
+      threshold: 100
+plugins:
+  brakeman:
+    enabled: true
+  fixme:
+    enabled: true
+  flog:
+    enabled: true
+  reek:
+    enabled: true
+  rubocop:
+    enabled: true
+    checks:
+      Rubocop/Style/StringLiterals:
+        enabled: false
+      Rubocop/Style/TrailingCommaInLiteral:
+        enabled: false
+      Rubocop/Style/HashSyntax:
+        enabled: false
+#exclude_patterns:
+#- app/assets/javascripts-jquery-ui

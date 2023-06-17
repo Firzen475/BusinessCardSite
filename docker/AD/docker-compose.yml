@@ -1,0 +1,61 @@
+version: "3.3"
+services:
+  ad:
+    privileged: true
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - TZ=${TZ_VALUE}
+        - LANG=${LANG_VALUE}
+        - DOMAIN=${DOMAIN}
+    image: ad
+    container_name: ad
+    hostname: DC1
+    dns:
+     # Нужно установить текущий хост как DNS сервер. Редактирование resolv.conf в докере не рекомендуется
+     - 192.168.3.10    
+    env_file: ./.env
+    ports:
+      - 192.168.2.11:53:53/udp
+      - 192.168.2.11:53:53/tcp
+      - 192.168.2.11:953:953/tcp
+      - 135:135
+      - 139:139
+      - 464:464
+      - 88:88
+      - 636:636
+      - 445:445
+      - 9389:9389
+      - 3269:3269
+      - 3268:3268
+      - 389:389
+    volumes:
+#      - ./bind1:/etc/bind
+      - ./bind2:/var/cache/bind
+      - ./bind3:/var/lib/bind
+#      - ./bind4:/var/log
+    networks:
+      # you may set custom IP addresses
+      front_tmp:
+        ipv4_address: 192.168.3.10
+#    healthcheck:
+#      test: [ "CMD-SHELL", "curl --fail http://tracks:3000" ]
+#      test: [ "CMD", "/root/healthcheck.sh" ]
+#      interval: 5s
+#      timeout: 5s
+#      retries: 50
+#      start_period: 10s
+#    restart: always
+
+
+
+networks:
+    front_tmp:
+        # use the bridge driver, but enable IPv6
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.3.0/24
+                #gateway: 172.16.238.1

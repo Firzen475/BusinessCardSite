@@ -1,0 +1,90 @@
+FROM ubuntu:20.04 as ansible_kms
+
+ARG TZ Europe/Moscow
+ENV TZ $TZ
+
+WORKDIR /root
+RUN apt update && apt install --no-install-recommends -yq  tzdata 
+
+RUN cat /etc/group
+RUN addgroup --gid 1000 pgadmin \
+ && adduser --quiet --no-create-home --home /pgadmin --shell /sbin/nologin --uid 1000 --ingroup pgadmin pgadmin \
+ && mkdir -p /pgadmin/config \
+ && chown -R 1000:1000 /pgadmin
+RUN ls -all /pgadmin
+RUN cat /etc/passwd
+ARG PGADMIN_VERSION 3.6
+ENV PGADMIN_VERSION $PGADMIN_VERSION
+ENV PYTHONDONTWRITEBYTECODE=1
+
+RUN apt install -y python3-pip 
+RUN pip install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py2.py3-none-any.whl 
+RUN echo https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py2.py3-none-any.whl
+RUN apt --purge autoremove python3-pip && apt install -y python3
+# && apk del alpine-sdk linux-headers
+
+RUN ls -all /usr/bin
+
+RUN echo ${PGADMIN_VERSION}
+RUN pip
+RUN python
+VOLUME /pgadmin/
+
+
+
+
+
+#RUN apt install -y git python3
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q sudo postfix
+#RUN mkdir -p /pgadmin4/
+#RUN git clone https://github.com/postgres/pgadmin4.git source
+#RUN ls -all ./
+#RUN cp -R /root/source/web/* /pgadmin4/
+#RUN cp /root/source/pkg/docker/run_pgadmin.py /pgadmin4/
+#RUN cp /root/source/pkg/docker/gunicorn_config.py /pgadmin4/
+#RUN cp /root/source/LICENSE /pgadmin4/
+#RUN cp /root/source/DEPENDENCIES /pgadmin4/
+#COPY ./entrypoint.sh /entrypoint.sh
+#WORKDIR /pgadmin4/
+#RUN ls -all ./ 
+#RUN apt install -y gunicorn 
+#RUN    find / -type d -name '__pycache__' -exec rm -rf {} + 
+#RUN    useradd -r -u 5050 -g root -s /sbin/nologin pgadmin 
+#RUN    mkdir -p /var/lib/pgadmin 
+#RUN    chown pgadmin:root /var/lib/pgadmin 
+#RUN    chmod g=u /var/lib/pgadmin 
+#RUN    touch /pgadmin4/config_distro.py 
+#RUN    chown pgadmin:root /pgadmin4/config_distro.py 
+#RUN    chmod g=u /pgadmin4/config_distro.py 
+#RUN    chmod g=u /etc/passwd 
+#RUN echo "pgadmin ALL = NOPASSWD: /usr/sbin/postfix start" > /etc/sudoers.d/postfix && \
+#  echo "pgadminr ALL = NOPASSWD: /usr/sbin/postfix start" >> /etc/sudoers.d/postfix
+#RUN python3 --version
+#ENV TIMEOUT 864000
+#RUN ls -all ./pgadmin
+#RUN python3 -c 'print($SESSION_EXPIRATION_TIME * 60 * 60 * 24)'
+#USER pgadmin
+#
+#VOLUME /var/lib/pgadmin
+#EXPOSE 80 443
+
+#ENTRYPOINT ["/entrypoint.sh"]
+#RUN curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | apt-key add 
+#RUN sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(cat /etc/os-release | grep  UBUNTU_CODENAME= | sed 's/UBUNTU_CODENAME=//g') pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+#RUN apt install -y pgadmin4-web
+#RUN ls -all /usr/pgadmin4/bin/
+#apt install -y python-dev libkrb5-dev krb5-user && \
+#mv /etc/krb5.conf  /etc/krb5.conf.back
+
+#RUN ls -all /var/lib/
+
+#RUN apt install -y --no-cache \
+#    samba-common-tools \
+#    samba-client \
+#    samba-server
+
+#COPY smb.conf /etc/samba/smb.conf
+
+#EXPOSE 139/tcp 445/tcp
+
+#CMD ["smbd", "--foreground", "--log-stdout", "--no-process-group"]

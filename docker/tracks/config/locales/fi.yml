@@ -1,0 +1,1436 @@
+fi:
+  activerecord:
+    attributes:
+      note:
+        created_at: Luotu
+        updated_at: Päivitetty
+      preference:
+        date_format: Päivämäärämuoto
+        due_style: Määräpäivän esitystapa
+        first_name: Etunimi
+        last_name: Sukunimi
+        email: Sähköpostiosoite
+        locale: Kieli
+        mobile_todos_per_page: Toimenpidettä sivulla (mobiilisivustolla)
+        refresh: Päivitystiheys (minuutteina)
+        review_period: Projektin tarkistusväli
+        show_completed_projects_in_sidebar: Näytä valmistuneet projektit sivupalkissa
+        show_hidden_contexts_in_sidebar: Näytä piilotetut asiayhteydet sivupalkissa
+        show_hidden_projects_in_sidebar: Näytä piilotetut projektit sivupalkissa
+        show_number_completed: Näytä valmistuneiden toimenpiteiden määrä
+        show_project_on_todo_done: Siirry projektinäkymään toimenpiteen valmistuessa
+        sms_context: Sähköpostin oletusasiayhteys
+        sms_email: Lähettäjän sähköpostiosoite
+        staleness_starts: Vanhentumisen alkaminen
+        time_zone: Aikavyöhyke
+        title_date_format: Otsakkeen päivämäärämuoto
+        verbose_action_descriptors: Näytä toimenpiteisiin liittyvät lisätiedot (asiayhteys,
+          projekti) laajennetussa muodossa
+        week_starts: Viikko alkaa
+        theme: Teema
+      project:
+        default_context_name: Oletuskonteksti
+        default_tags: Oletustagit
+        description: Kuvaus
+        name: Nimi
+      todo:
+        context: Konteksti
+        description: Kuvaus
+        due: Määräpäivä
+        notes: Muistiinpanot
+        predecessors: Riippuu
+        project: Projekti
+        show_from: Näytä alkaen
+        tags: Tagit
+      user:
+        auth_type: Kirjautumistyyppi
+        display_name: Näyttönimi
+        email: Sähköpostiosoite
+        first_name: Etunimi
+        last_name: Sukunimi
+        login: Käyttäjätunnus
+        open_id_url: OpenID-URL
+        password: Salasana
+        created_at: Luotu
+        last_login_at: Viimeisin kirjautuminen
+    errors:
+      full_messages:
+        format: "%{attribute} %{message}"
+      messages:
+        accepted: täytyy hyväksyä
+        blank: ei voi olla tyhjä
+        confirmation: ei vastaa vahvistusarvoa
+        empty: ei voi olla tyhjä
+        equal_to: täytyy olla sama kuin %{count}
+        even: täytyy olla tasan
+        exclusion: on varattu
+        greater_than: täytyy olla suurempi kuin %{count}
+        greater_than_or_equal_to: täytyy olla suurempi tai yhtäsuuri kuin %{count}
+        inclusion: ei sisälly listaan
+        invalid: ei voi sisältää pilkkua
+        less_than: täytyy olla vähemmän kuin %{count}
+        less_than_or_equal_to: täytyy olla vähemmän tai yhtäsuuri kuin %{count}
+        not_a_number: ei ole numero
+        odd: täytyy olla pariton
+        record_invalid: 'Validointi epäonnistui: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Tietueen poistaminen epäonnistui, koska tietue %{record} riippuu
+            siitä
+          has_many: Tietueen poistaminen epäonnistui, koska tietueet %{record} riippuvat
+            siitä
+        taken: on jo varattu
+        too_long: on liian pitkä (enimmäispituus on %{count} merkkiä)
+        too_short: on liian lyhyt (vähimmäispituus on %{count} merkkiä)
+        wrong_length: on väärän pituinen (tulisi olla %{count} merkkiä)
+      models:
+        project:
+          attributes:
+            name:
+              blank: projektilla on oltava nimi
+              taken: on jo olemassa
+              too_long: projektin nimen tulee olla alle 256 merkkiä pitkä
+      template:
+        body: 'Seuraavissa kentissä on virheitä:'
+        header:
+          one: 1 virhe esti tämän %{model} tallentamisen
+          other: '%{count} virhettä estivät tämän %{model} tallentamisen'
+  common:
+    action: Toimenpide
+    actions: Toimenpiteet
+    actions_midsentence:
+      one: toimenpide
+      other: toimenpidettä
+    add: Lisää
+    ajaxError: Virhe noudettaessa palvelimelta
+    back: Takaisin
+    bugs: Ohjelmavirheet
+    cancel: Peruuta
+    collapse_expand: Sulje/avaa
+    context: Asiayhteys
+    contexts: Asiayhteydet
+    contribute: Osallistu
+    create: Luo
+    days_midsentence:
+      one: päivä
+      other: päivää
+    deferred: lykätty
+    description: Kuvaus
+    drag_handle: VEDÄ
+    email: Sähköposti
+    errors_with_fields: 'Seuraavien kenttien kanssa esiintyi ongelmia:'
+    first: Ensimmäinen
+    forth: Neljäs
+    fourth: Neljäs
+    go_back: Takaisin
+    last: Viimeinen
+    logout: Kirjaudu ulos
+    mailing_list: Postituslista
+    month: kuukausi
+    months: kuukautta
+    next: Seuraava
+    none: Ei
+    not_available_abbr: ei
+    note:
+      one: 1 muistiinpano
+      other: "%{count} muistiinpanoa"
+      zero: ei muistiinpanoja
+    notes: Muistiinpanot
+    numbered_step: Askel %{number}
+    ok: Ok
+    optional: valinnainen
+    previous: Edellinen
+    project: Projekti
+    projects: Projektit
+    recurring_todos: Toistuvat toimenpiteet
+    review: Käsittely
+    search: Haku
+    second: sekunti
+    server_error: Palvelimella tapahtui virhe.
+    show_all: Näytä kaikki
+    sort:
+      alphabetically: Aakkosjärjestyksessä
+      alphabetically_confirm: Haluatko varmasti lajitella nämä projektit aakkosjärjestykseen?
+        Tämä korvaa nykyisen lajittelujärjestyksen.
+      alphabetically_title: Lajittele projektit aakkosjärjestykseen
+      by_task_count: Tehtävämäärän mukaan
+      by_task_count_title: Lajittele tehtävämäärän mukaan
+      by_task_count_title_confirm: Haluatko varmasti lajitella nämä projektit tehtävämäärän
+        mukaan? Tämä korvaa nykyisen lajittelujärjestyksen.
+      sort: Lajittele
+    third: Kolmas
+    todo: tehtävä
+    update: Päivitä
+    website: Web-sivusto
+    week: viikko
+    weeks: viikkoa
+    wiki: Wiki
+  contexts:
+    add_context: Lisää asiayhteys
+    all_completed_tasks_title: TRACKS::Kaikki valmistuneet toimenpiteet asiayhteydessä
+      '%{context_name}'
+    completed_tasks_title: TRACKS::Valmistuneet toimenpiteet asiayhteydessä '%{context_name}'
+    context_deleted: Poistettu asiayhteys '%{name}'
+    context_hide: Piilota etusivulta?
+    context_name: Asiayhteyden nimi
+    context_state: Asiayhteyden tila
+    delete_context: Poista asiayhteys
+    delete_context_confirmation: Oletko varma, että haluat poistaa asiayhteyden ”%{name}”?
+      Samalla poistetaan myös kaikki asiayhteyteen liittyvät (toistuvat) toimenpiteet!
+    delete_context_title: Poista asiayhteys
+    edit_context: Muokkaa asiayhteyttä
+    hidden_contexts: Piilotetut asiayhteydet
+    hide_form: Piilota lomake
+    hide_form_title: Piilota asiayhteyden lisäyslomake
+    last_completed_in_context: "(viimeinen %{number})"
+    letter_abbreviation: A
+    new_context_post: "' luodaan. Oletko varma?"
+    new_context_pre: Uusi asiayhteys '
+    no_contexts_: 'Ei asiayhteyksiä '
+    no_contexts_active: Aktiivisia asiayhteyksiä ei ole
+    no_contexts_closed: Suljettuja asiayhteyksiä ei ole
+    no_contexts_hidden: Piilotettuja asiayhteyksiä ei ole
+    save_status_message: Asiayhteys tallennettu
+    show_form: Luo uusi asiayhteys
+    show_form_title: Lisää asiayhteys
+    status_active: Asiayhteys on aktiivinen
+    status_hidden: Asiayhteys on piilotettu
+    todos_append: tässä asiayhteydessä
+    update_status_message: Asiayhteyden nimi muutettiin
+    view_link: 'Avaa asiayhteys %{name}'
+    visible_contexts: Näkyvät asiayhteydet
+  data:
+    import_destination_invalid: Virheellinen tuonnin kohde
+    import_errors: Tuonnissa tapahtui virheitä
+    import_successful: Tuonti onnistui.
+    invalid_import_destination: Virheellinen tuontikohde
+    xml: XML
+    csv: CSV
+    yaml: YAML
+    export:
+      xml_link_title: XML-tiedosto (vain toimenpiteet)
+      csv_notes_title: CSV-tiedosto (vain muistiinpanot)
+      csv_actions_title: CSV-tiedosto (toimenpiteet, asiayhteydet ja projektit)
+      yaml_link_title: YAML-tiedosto
+      download_link: Latauslinkki
+      xml_link_description: XML-tiedosto, joka sisältää toimenpiteesi, asiayhteytesi,
+        projektisi, avainsanasi ja muistiinpanosi
+      xml_description: '%{xml}: Paras tietojen tuontiin tai tietojen siirtämiseen
+        toiseen tarkoitukseen'
+      csv_notes_description: CSV-tiedosto, joka sisältää kaikki muistiinpanosi
+      csv_actions_description: CSV-tiedosto, joka sisältää kaikki toimenpiteesi asiayhteyksien
+        ja projektien kera
+      csv_description: '%{csv}: Paras tietojen vientiin taulukkolaskenta- tai tietoanalyysiohjelmaan'
+      yaml_experimental: Huomaathan, että YAML-tiedostojen tuonti onnistuu nykyisin
+        vain kokeellisesti. Älä luota siihen kriittisten tietojen varmuuskopioinnissa.
+      yaml_link_description: YAML-tiedosto, joka sisältää toimenpiteesi, asiayhteytesi,
+        projektisi, asiasanasi ja muistiinpanosi
+      yaml_description: '%{yaml}: Paras tietojen vientiin.'
+      format_header: 'Voit valita seuraavien muotojen väliltä:'
+      title: Tietojen vienti
+      page_title: Tracks::Vienti
+    import:
+      warning: Varoitus
+      paste_field: 'Liitä viemäsi YAML-tiedoston sisältö allaolevaan tekstilaatikkoon:'
+      yaml_warning: '%{warning}: kaikki nykyiset tietosi poistetaan ennen YAML-tiedoston
+        tuontia, joten jos sinulla on pääsy tietokantaan, suosittelemme vahvasti tietokannan
+        varmuuskopiointia siltä varalta että jotain menee pieleen.'
+      yaml_disabled: YAMLin tuonti on pois käytöstä
+      todos_count: '%{count} toimenpidettä tuotu'
+      projects_count: '%{count} projektia tuotu'
+      upload_csv: Lähetä CSV-tiedostosi
+      upload: Tuo
+      successful: Tuonti onnistui.
+      target_field: 'Tuo kohteeseen:'
+      submit: Tuo
+      header: Tietojen tuonti
+      map_title: Merkitse tuontitiedostoa vastaavat kentät
+      errors:
+        save_error: Lähetetyn CSV-tiedoston tallentaminen epäonnistui (%{path_and_file}).
+          Pystyykö Tracks kirjoittamaan tallennushakemistoon? %{e}
+        invalid_csv: 'Virheellinen CSV: otsikoiden lukeminen epäonnistui: %{e}'
+        file_blank: Tiedosto ei voi olla tyhjä
+        some: Tuonnissa tapahtui virheitä
+        invalid_destination: 'Virheellinen tuontikohde: %{e}'
+        no_context: Asiayhteyttä ei löytynyt oletusarvoksi
+  date:
+    abbr_day_names:
+    - Su
+    - Ma
+    - Ti
+    - Ke
+    - To
+    - Pe
+    - La
+    abbr_month_names:
+    - 
+    - Tammi
+    - Helmi
+    - Maalis
+    - Huhti
+    - Touko
+    - Kesä
+    - Heinä
+    - Elo
+    - Syys
+    - Loka
+    - Marras
+    - Joulu
+    day_names:
+    - Sunnuntai
+    - Maanantai
+    - Tiistai
+    - Keskiviikko
+    - Torstai
+    - Perjantai
+    - Lauantai
+    formats:
+      default: "%d.%m.%Y"
+      long: "%B %d, %Y"
+      longer: "%A %B %d, %Y"
+      month_day: ''
+      only_day: ''
+      short: "%b %d"
+    month_names:
+    - 
+    - Tammikuu
+    - Helmikuu
+    - Maaliskuu
+    - Huhtikuu
+    - Toukokuu
+    - Kesäkuu
+    - Heinäkuu
+    - Elokuu
+    - Syyskuu
+    - Lokakuu
+    - Marraskuu
+    - Joulukuu
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: noin 1 tunti
+        other: noin %{count} tuntia
+      about_x_months:
+        one: noin 1 kuukausi
+        other: noin %{count} kuukautta
+      about_x_years:
+        one: noin 1 vuosi
+        other: noin %{count} vuotta
+      almost_x_years:
+        one: lähes 1 vuosi
+        other: lähes %{count} vuotta
+      half_a_minute: puoli minuuttia
+      less_than_x_minutes:
+        one: alle 1 minuutti
+        other: alle %{count} minuuttia
+      less_than_x_seconds:
+        one: alle 1 sekunti
+        other: alle %{count} sekuntia
+      over_x_years:
+        one: yli vuosi
+        other: yli %{count} vuotta
+      x_days:
+        one: 1 päivä
+        other: '%{count} päivää'
+      x_minutes:
+        one: 1 minute
+        other: '%{count} minutes'
+      x_months:
+        one: 1 kuukausi
+        other: '%{count} kuukautta'
+      x_seconds:
+        one: 1 sekunti
+        other: '%{count} sekuntia'
+    prompts:
+      day: Day
+      hour: Tunti
+      minute: Minute
+      month: Kuukausi
+      second: Sekunti
+      year: Vuosi
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: tulee hyväksyä
+      blank: ei voi olla tyhjä
+      confirmation: ei vastaa %{attribute}
+      empty: ei voi olla tyhjä
+      equal_to: tulee olla yhtä kuin %{count}
+      even: tulee olla parillinen
+      exclusion: on varattu
+      greater_than: tulee olla suurempi kuin %{count}
+      greater_than_or_equal_to: tulee olla suurempi tai yhtäsuuri kuin %{count}
+      inclusion: ei sisälly listaan
+      invalid: ei ole kelvollinen
+      less_than: tulee olla vähemmän kuin %{count}
+      less_than_or_equal_to: tulee olla vähemmän tai yhtäsuuri kuin %{count}
+      not_a_number: ei ole numero
+      not_an_integer: tulee olla kokonaisluku
+      odd: tulee olla pariton
+      other_than: tulee olla erisuuri kuin %{count}
+      present: tulee olla tyhjä
+      taken: on jo varattu
+      too_long: 'on liian pitkä (enimmäispituus on %{count} merkkiä)'
+      too_short: 'on liian lyhyt (vähimmäispituus on %{count} merkkiä)'
+      wrong_length: on väärän pituinen (tulee olla %{count} merkkiä)
+    user_unauthorized: '401 Pääsy kielletty: Vain ylläpitäjillä on pääsy tähän toiminnallisuuteen.'
+  feedlist:
+    actions_completed_last_week: Viimeisen seitsemän päivän aikana valmistuneet toimenpiteet
+    actions_due_next_week: Seitsemän päivän sisään tehtävät toimenpiteet
+    actions_due_today: Tänään tai aiemmin tehtävät toimenpiteet
+    active_projects_wo_next: Aktiiviset projektit, joilla ei ole seuraavia toimenpiteitä
+    active_starred_actions: Kaikki tähdellä merkityt aktiiviset toimenpiteet
+    all_actions: Kaikki toimenpiteet
+    all_contexts: Kaikki asiayhteydet
+    all_projects: Kaikki projektit
+    choose_context: Valitse asiayhteys, jonka syötteen haluat
+    choose_project: Valitse projekti, jonka syötteen haluat
+    context_centric_actions: Syötteet keskeneräisille toimenpiteille tietyssä asiayhteydessä
+    context_needed: Luo vähintään yksi asiayhteys ennenkuin voit pyytää syötettä
+    ical_feed: iCal-syöte
+    last_fixed_number: Viimeiset %{number} toimenpidettä
+    legend: 'Selite:'
+    notice_incomplete_only: 'Huomaa: Kaikki syötteet näyttävät vain keskeneräiset
+      toimenpiteet, ellei toisin mainita. Nämä iCal-syötteet voi lisätä tehtävälistoille.
+      Jos haluat näyttää määräajat kalenterissa,käytä iCal-syötettä kalenterisivulla'
+    plain_text_feed: Pelkkä teksti -syöte
+    project_centric: Syötteet keskeneräisille toimenpiteille tietyssä projektissa
+    project_needed: Ennen syötteen pyytämistä luo ainakin yksi projekti
+    projects_and_actions: Aktiiviset projektit toimenpiteineen
+    rss_feed: RSS-syöte
+    select_feed_for_context: Valitse tämän asiayhteyden syöte
+    select_feed_for_project: Valitse tämän projektin syöte
+  footer:
+    version: 'Tracks %{version} (%{revision_with_date})'
+    send_feedback: Lähetä palautetta
+  helpers:
+    select:
+      prompt: Valitse
+    submit:
+      create: Luo %{model}
+      submit: Tallenna %{model}
+      update: Päivitä %{model}
+  integrations:
+    opensearch_description: Hae Tracksista
+    mailgun:
+      instructions:
+        '1': Mene %{mailgun_link}iin ja rekisteröi ilmainen käyttäjätunnus.
+        '6': 'Päivitä site.yml-tiedostossa oleva mailmap määrittääksesi, mitkä lähettäjät
+          voivat lähettää sähköpostia mihinkin käytettävään osoitteeseen. Jos esimerkiksi
+          haluat lähettää työ- ja kotiosoitteistasi sähköpostia Tracksiin Mailgunin
+          kautta, määritä se näin: %{code}'
+        '5': Lisää Mailgunin API-avaimesi (ei julkinen API-avain) Tracksin site.yml-tiedostoon
+        '4': Valitse oletusasiayhteys, johon sähköpostilla tulevat toimenpiteet lisätään,
+          %{sms_context_name} -kentällä
+        '3': Siirry %{preferences_link} ja syötä Mailgun-sähköpostiosoitteesi (esim.
+          tracks@käyttäjä.mailgun.com) %{sms_email_name} -kenttään.
+        2b: Action-kohtaan merkitään ”forward("http://palvelimeni.example.com/mailgun/mime")”
+        2a: "'Filter expression' asetetaan arvoon 'catch_all()'"
+        '2': 'Mene Mailgunin ohjauspaneelin Routes-kohtaan ja lisää uusi reitti:'
+      gateway_instructions: Kaikki ylläolevat maininnat sähköpostin muotoilusta pätevät
+        myös Mailgun-käsittelyyn, koska tieto käsitellään samalla tavalla kummassakin
+        tapauksessa
+      conditions: Tämän toimiminen edellyttää, että Tracks-palvelimesi on tavoitettavissa
+        internetin kautta jotta Mailgun voi lähettää POST-kutsuja siihen.
+      description: Jos haluat lähettää toimenpiteitä sähköpostilla Tracksiin mutta
+        samalla palvelimella ei ole sähköpostipalvelinta, voit käyttää Tracksin sisäänrakennettua
+        %{mailgun_link}-tukea.
+    cron_email_subject: Tracks-toimenpiteet seuraavan 7 päivän aikana
+    example_names:
+      tag:
+        '2': avainsana2
+        '1': avainsana1
+      project: projekti
+      context: asiayhteys
+      todo: mahtava toimenpiteeni
+    email_rich:
+      field_descriptions:
+        star: Merkitsee toimenpiteen tähdellä
+        tag: Asiasana, johon toimenpide liitetään – voidaan käyttää useamman kerran
+        due_date: Toimenpiteen määräpäivä (2 numeroa pelkän päivän määrittämiseksi,
+          4 numeroa kuukauden ja päivän tai 6 numeroa vuoden, kuukauden ja päivän
+          määrittämiseksi näissä järjestyksissä)
+        project: Projekti, johon toimenpide liitetään
+        context: Konteksti, johon toimenpide liitetään
+        tickler_date: Toimenpiteen näyttöajankohta (2 numeroa pelkän päivän määrittämiseksi,
+          4 numeroa kuukauden ja päivän tai 6 numeroa vuoden, kuukauden ja päivän
+          määrittämiseksi näissä järjestyksissä)
+      fields_instruction: Kaikki merkinnät ovat valinnaisia. Tekstiä ensimmäiseen
+        merkintään asti käytetään toimenpiteen kuvauksena
+      meaning_title: Tarkoitus
+      symbol_title: Merkintä
+      fields_title: 'Kentät:'
+      description: 'Molemmilla ylläolevilla tavoilla voidaan käyttää viestin otsikossa
+        seuraavaa muotoilua tietojen lisäämiseen:'
+    message_gateway:
+      instructions:
+        '3': Lähetä sähköposti juuri asettamaasi osoitteeseen!
+        '2': Sähköpostipalvelimessasi (esimerkiksi sendmail/qmail/postfix), aseta
+          sähköpostialias putkittamaan viestit komennolle %{command}
+        '1': Mene %{preferences_link} ja aseta "%{sms_email_name}" sekä "%{sms_context_name}"
+          sähköpostin kautta lisättäviä toimenpiteitä varten (jotka voisivat muodostua
+          myös SMS-viestin perusteella)
+      one_user_configuration: 'Voit myös merkitä kaikki saapuvat sähköpostit tietyn
+        Tracks-käyttäjän toimenpiteiksi. Muuta site.yml-tiedoston asetusta email_dispatch
+        arvoon %{single_user_value} ja välitä käyttäjän tunnus putkituskomennossa:
+        %{code}'
+      configuration: Sinun täytyy ehkä muuttaa asetus %{site_yml}-tiedostossa, jotta
+        viestiväylä osaa käyttää %{to_name}-kenttää tai %{from_name}-kenttää löytääkseen
+        sähköpostia vastaavan Tracks-käyttäjän.
+      rich_api_tip: Voit myös käyttää kehittynyttä sähköpostimuotoa lähettääksesi
+        toimenpiteitä kuten ”pese pyykit @ koti” tai ”Soita Jyrille > projekti X”.
+        Viestin otsikkoon täytetään toimenpiteen kuvaus, asiayhteys ja projekti, kun
+        taas viestin runko viedään toimenpiteen muistiinpanokenttään.
+      description: 'Jos Tracks pyörii samalla palvelimella kuin sähköpostisi, voit
+        käyttää sisäänrakennettua sähköpostinkäsittelijää. Käyttöönotto onnistuu seuraavasti:'
+    feeds_link_text: Tracksin tarjoamaa tekstisyötettä
+    cron_2: Voit tietysti käyttää myös toista %{feeds_link} – mikset vaikkapa lähettäisi
+      projektinne seuraavia toimenpiteitä kollegoillesi?
+    cron_1: Jos syötät seuraavan rivin crontabiisi, saat jokapäivä viiden aikaan aamulla
+      sähköpostin jossa on lista seuraavan 7 päivän aikana tehtävistä tehtävistä.
+    tell_us_link_text: Ehdota sitä tiketissä
+    add_your_own: Onko sinulla oma vinkki, jonka haluaisit jakaa? %{tell_us_link}
+      ja saatamme esitellä sen kaikille tulevassa Tracksin versiossa.
+    contents_header: 'Sisällys:'
+    developer_documentation_link: Tracksin kehittäjäohjeista
+    intro: Tracks voidaan liittää erinäisiin muihin työkaluihin – mitä ikinä tarvitsetkaan
+      saadaksesi asioita tehtyä! Tällä sivulla on tietoa joidenkin tällaisten liitäntöjen
+      tekemisestä. Kaikki ohjeista eivät toimi joka alustalla, ja osa vaatii muita
+      enemmän teknistä osaamista. Katso lisätietoja myös %{documentation_link}
+    title: Liitännät
+    sections:
+      email_rich: Kehittynyt sähköpostimuoto toimenpiteitä varten
+      mailgun: Lähetä sähköpostia Tracksiin Mailgunilla
+      message_gateway: Yhdistä Tracks sähköpostipalvelimeen, jotta voit lähettää toimenpiteitä
+        sähköpostilla Tracksiin
+      automatic_email: Tulevien toimenpiteiden automaattinen lähettäminen sähköpostilla
+  help:
+    title: Ohje
+    usage: 'Ohjeita sovelluksen käyttämiseen löytyy %{manual_link} projektin GitHub-wikisivustolta.'
+    manual_link_text: käyttöohjeesta
+    bugs: 'Jos törmäät virheeseen tai kaipaat jotain ominaisuutta, kerro asiasta %{issue_link}.'
+    issue_link_text: tikettijonoon
+    contribute: 'Otamme kiitollisuudella vastaan kaiken avun Tracksin kehittämiseen.
+      Katso lisätietoja %{contribute_link}. Voit myös tulla keskustelemaan yhteisön
+      kanssa:'
+    contribute_link_text: projektin verkkosivustolta
+    mailing_list_link_text: Sähköpostilista
+    irc_bullet: '%{irc_link} (käytettävissä myös %{matrix_link})'
+    irc_link_text: 'IRC-kanava #Tracks@Libera'
+    matrix_link_text: Matrixin kautta
+  layouts:
+    mobile_navigation:
+      calendar: Kalenteri
+      contexts: Asiayhteydet
+      feeds: Syötteet
+      full: Täysi sivusto
+      home: Etusivu
+      logout: Kirjaudu ulos
+      new_action: Uusi
+      projects: Projektit
+      starred: Tähditetyt
+      tickler: Muistilista
+    navigation:
+      admin: Ylläpito
+      api_docs: REST-rajapintadokumentaatio
+      calendar: Kalenteri
+      calendar_title: Kalenteri määräpäivistä
+      completed_tasks: Valmis
+      completed_tasks_title: Valmiit
+      contexts_title: Asiayhteydet
+      export: Vie
+      export_title: Vie tietoja
+      feeds: Syötteet
+      feeds_title: Näytä lista syötteistä
+      group_view_by_context: Ryhmittele asiayhteyden mukaan
+      group_view_by_project: Ryhmittele projektin mukaan
+      group_view_by_title: Muuta sivun toimenpiteiden ryhmittelyä
+      help: "?"
+      help_page: Ohje
+      home: Etusivu
+      home_title: Etusivu
+      import: Tuo
+      import_title: Tuo tietoja
+      integrations_: Integroi Tracks
+      manage_users: Hallitse käyttäjiä
+      manage_users_title: Lisää tai poista käyttäjiä
+      mobile: Mobiilisivusto
+      notes_title: Näytä kaikki muistiinpanot
+      options: Asetukset
+      organize: Järjestele
+      preferences: Asetukset
+      preferences_title: Näytä asetukseni
+      projects_title: Projektit
+      recurring_todos: Toistuvat toimenpiteet
+      recurring_todos_title: Hallitse toistuvia toimenpiteitä
+      review_title: Tee katselmointi
+      search: Hae kaikesta
+      show_empty_containers_context: Näytä tyhjät asiayhteydet
+      show_empty_containers_project: Näytä tyhjät projektit
+      show_empty_containers_title: Näytä tai piilota tyhjät asiayhteydet tai projektit
+      starred: Tähdellä merkityt
+      starred_title: Näytä tähdellä merkityt toimenpiteesi
+      stats: Tilastot
+      stats_title: Näytä tilastosi
+      tickler: Muistilista
+      tickler_title: Muistilista
+      view: Näytä
+    next_actions_rss_feed: RSS-syöte seuraavista toimenpiteistä
+    toggle_contexts: Vaihda suljettujen asiayhteyksien tilaa
+    toggle_contexts_title: Muuta suljetut asiayhteydet näkyviksi tai näkymättömiksi
+    toggle_notes: Vaihda muistiinpanojen tilaa
+    toggle_notes_title: Vaihda kaikkien muistiinpanojen tilaa
+  login:
+    account_login: Sisäänkirjautuminen
+    cas_create_account: Jos haluat pyytää käyttäjätiliä, mene %{signup_link}
+    cas_logged_in_greeting: Hei, %{username}! Olet kirjautunut sisään.
+    cas_login: CAS-kirjautuminen
+    cas_no_user_found: Hei, %{username}! Sinulla ei ole käyttäjätiliä Tracksissa.
+    cas_signup_link: Pyydä käyttäjätunnusta
+    cas_username_not_found: CAS-käyttäjätunnuksella (%{username}) ei ole käyttäjätiliä
+    log_in_again: Kirjaudu sisään uudelleen.
+    logged_out: Olet kirjautunut ulos Tracksista.
+    login_cas: siirry CAS-järjestelmään
+    login_standard: palaa tavalliseen kirjautumiseen
+    login_with_openid: kirjaudu sisään OpenID:llä
+    mobile_use_openid: "... tai kirjaudu OpenID:llä"
+    openid_identity_url_not_found: Henkilöllisyys-URL:llä (%{identity_url}) ei ole
+      käyttäjätiliä
+    option_separator: tai
+    please_login: Kirjaudu sisään käyttääksesi Tracksia
+    session_time_out: Istunto on vanhentunut. %{link}
+    session_will_expire: istunto vanhenee %{hours} tunnin epäaktiivisuuden jälkeen.
+    session_will_not_expire: istunto ei vanhene.
+    sign_in: Kirjaudu sisään
+    signup_prompt: Haluatko luoda käyttäjätilin?
+    successful: Kirjauduit onnistuneesti sisään. Tervetuloa takaisin!
+    successful_with_session_info: 'Kirjautuminen onnistui:'
+    unsuccessful: Kirjautuminen epäonnistui.
+    user_no_expiry: Pysy kirjautuneena
+  models:
+    preference:
+      due_in: Tehtävä %{days} päivän päästä
+      due_on: Tehtävä %{date}
+      due_styles:
+      - Tehtävä ___ päivän päästä
+      - Tehtävä _______
+      themes:
+        black: Musta
+        light_blue: Vaalea sininen
+    project:
+      feed_description: Listaa kaikki käyttäjän %{username} projektit
+      feed_title: Tracks-projektit
+    todo:
+      error_date_must_be_future: tulee olla päivä tulevaisuudessa
+    user:
+      error_context_not_associated: Asiayhteys %{context} ei liity käyttäjään %{user}.
+      error_project_not_associated: Projekti %{project} ei liity käyttäjään %{user}.
+  notes:
+    delete_confirmation: Oletko varma, että haluat poistaa muistiinpanon '%{id}'?
+    delete_item_title: Poista
+    delete_note_confirm: Oletko varma että haluat poistaa muistiinpanon '%{id}'?
+    delete_note_title: Poista muistiinpano '%{id}'
+    deleted_note: Muistiinpano '%{id}' poistettu
+    edit_item_title: Muokkaa
+    in_project: 'Kuuluu: '
+    no_notes_available: Muistiinpanoja ei löytynyt. Voit lisätä niitä projekteihin
+      projektisivulta.
+    note_header: Muistiinpano %{id}
+    note_link_title: Näytä muistiinpano %{id}
+    note_location_link: 'Kuuluu:'
+    save_status_message: Muistiinpano %{id} tallennettu
+    show_note_title: Näytä muistiinpano
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%u%n"
+        precision: '2'
+        separator: ","
+        significant: Merkitsevä
+        strip_insignificant_zeros: Poista merkitsemättömät nollat
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: '3'
+      separator: ","
+      significant: Merkitsevä
+      strip_insignificant_zeros: Poista merkitsemättömät nollat
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Biljoona
+          million: Miljoona
+          quadrillion: Tuhat biljoonaa
+          thousand: Tuhat
+          trillion: Biljoona
+          unit: "."
+      format:
+        delimiter: ''
+        precision: '1'
+        significant: 'true'
+        strip_insignificant_zeros: 'true'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Tavu
+            other: Tavua
+          gb: Gt
+          kb: kt
+          mb: Mt
+          tb: Tt
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  preferences:
+    authentication_header: Tunnistautumisesi
+    change_authentication_type: Muuta kirjautumistyyppiäsi
+    change_identity_url: Vaihda henkilöllisyysosoitettasi
+    change_password: Muuta salasanasi
+    current_authentication_type: Tunnistautumistyyppisi on %{auth_type}
+    edit_preferences: Muokkaa asetuksia
+    generate_new_token: Luo uusi avainkoodi
+    generate_new_token_confirm: Oletko varma? Uuden avainkoodin luominen korvaa nykyisen
+      ja estää sen käyttämisen ulkoisissa palveluissa.
+    is_false: 'false'
+    is_true: 'true'
+    open_id_url: OpenID-osoitteesi on
+    page_title: TRACKS::Asetukset
+    page_title_edit: TRACKS::Muokkaa asetuksia
+    password_changed: Salasanasi on muutettu, kirjaudu uudelleen sisään.
+    remove_introduction: Voit poistaa käyttäjätunnuksesi tässä. Huomaa, että tämä
+      on peruuttamatonta ja poistaa kaikki tietosi! Poiston jälkeen sinut kirjataan
+      ulos.
+    show_number_completed: Näytä %{number} valmista toimenpidettä
+    sms_context_none: Ei mikään
+    staleness_starts_after: Toimenpide alkaa vanhentumaan %{days} päivän kuluttua
+    tabs:
+      authentication: Tunnistautuminen
+      date_and_time: Päivämäärä ja aika
+      profile: Profiili
+      remove_account: Poista käyttäjätili
+      tracks_behavior: Tracksin toiminta
+    title: Asetuksesi
+    token_description: Avainkoodi (syötteiden ja rajapinnan käyttämiseen)
+    token_header: Avainkoodisi
+    updated: Asetukset päivitetty
+    result_in: 'Tällä saat: '
+    pick_one: 'Tai valitse joku seuraavista:'
+  projects:
+    actions_in_project_title: Projektin toimenpiteet
+    active_projects: Aktiiviset projektit
+    add_note: Lisää muistiinpano
+    add_note_submit: Lisää muistiinpano
+    add_project: Lisää projekti
+    all_completed_tasks_title: TRACKS::Lista valmistuneista toimenpiteistä projektissa
+      ”%{project_name}”
+    completed_actions: Valmistuneet toimenpiteet
+    completed_actions_empty: Valmistuneet toimenpiteet on tyhjä
+    completed_projects: Valmistuneet projektit
+    completed_tasks_title: TRACKS::Näytä valmistuneet toimenpiteet projektissa ”%{project_name}”
+    default_context: Projektin oletusasiayhteys on %{context}
+    default_context_removed: Poistettu oletusasiayhteys
+    default_context_set: Set project's default context to %{default_context}
+    default_tags_removed_notice: Poistettu oletusavainsanat
+    deferred_actions: Lykätyt toimenpiteet
+    deferred_actions_empty: Lykätyt toimenpiteet tyhjä
+    delete_project: Poista projekti
+    delete_project_confirmation: Haluatko varmasti poistaa projektin ”%{name}”?
+    delete_project_title: Poista projekti
+    edit_project_settings: Muokkaa projektin asetuksia
+    edit_project_title: Muokkaa projektia
+    hidden_projects: Piilotetut projektit
+    hide_form: Piilota lomake
+    hide_form_title: Piilota projektinluontilomake
+    is_active: on aktiivinen
+    last_completed_in_project: "(viimeiset %{number})"
+    letter_abbreviation: P
+    list_completed_projects: TRACKS::Valmistuneiden projektien lista
+    list_projects: TRACKS::Projektilista
+    list_reviews: TRACKS::Katselmointi
+    no_default_context: Tällä projektilla ei ole oletusasiayhteyttä
+    no_last_completed_projects: Valmiita projekteja ei löytynyt
+    no_last_completed_recurring_todos: Valmiita toistuvia toimenpiteitä ei löytynyt
+    no_notes_attached: Projektiin ei ole liitetty muistiinpanoja
+    no_projects: Projekteja ei löytynyt
+    notes: Muistiinpanot
+    notes_empty: Tälle projektille ei ole muistiinpanoja
+    page_title: 'TRACKS::Project: %{project}'
+    project_destroyed_status: Projekti ”%{name}” poistettu
+    project_saved_status: Projekti tallennettu
+    project_state: Project is %{state}.
+    set_default_tags_notice: Set project's default tags to %{default_tags}
+    settings: Asetukset
+    show_form: Lisää projekti
+    show_form_title: Luo uusi projekti
+    state: Tämä projekti on %{state}
+    status_project_name_changed: Projektin nimi muutettiin
+    this_project: Tämä projekti
+    to_new_project_page: Siirry uuden projektin sivulle
+    view_link: 'Avaa projekti %{name}'
+    was_marked_complete: on merkitty valmistuneeksi
+    was_marked_hidden: on merkitty piilotetuksi
+    with_default_context: with a default context of '%{context_name}'
+    with_default_tags: ja oletusasiasanoilla ”%{tags}”
+    with_no_default_context: ilman oletusasiayhteyttä
+    with_no_default_tags: ja ilman oletusavainsanoja
+  search:
+    contexts_matching_query: hakua vastaavaa asiayhteyttä
+    no_results: Hakusi ei tuottanut tuloksia.
+    notes_matching_query: hakua vastaavaa muistiinpanoa
+    projects_matching_query: hakua vastaavaa projektia
+    tags_matching_query: hakua vastaavaa asiasanaa
+    todos_matching_query: hakua vastaavaa toimenpidettä
+  shared:
+    add_action: Lisää toimenpide
+    add_actions: Lisää toimenpiteitä
+    add_context: Lisää asiayhteys
+    context_for_all_actions: Asiayhteys kaikille toimenpiteille
+    hide_action_form_title: Piilota toimenpiteen lisäyslomake
+    hide_form: Piilota lomake
+    make_actions_dependent: Määritä toimenpiteet riippuvaisiksi toisistaan
+    multiple_next_actions: Useita seuraavia toimenpiteitä (omilla riveillään)
+    project_for_all_actions: Projekti kaikille toimenpiteille
+    separate_tags_with_commas: erota pilkulla
+    tags_for_all_actions: Asiasanat kaikille toimenpiteille (pilkulla erotettuna)
+    toggle_multi: Lisää useita
+    toggle_multi_title: Vaihda yksittäisen ja useiden toimenpiteiden lisäämislomakkeen
+      välillä
+    toggle_single: Lisää seuraava toimenpide
+    toggle_single_title: Lisää uusi seuraava toimenpide
+  sidebar:
+    list_empty: Ei
+    list_name_active_contexts: Aktiiviset asiayhteydet
+    list_name_active_projects: Aktiiviset projektit
+    list_name_completed_projects: Valmiit projektit
+    list_name_hidden_contexts: Piilotetut asiayhteydet
+    list_name_hidden_projects: Piilotetut projektit
+  states:
+    active: Aktiivinen
+    active_plural: Aktiivinen
+    blocked: Estetty
+    blocked_plural: Estetty
+    close: Suljettu
+    closed_plural: Suljettu
+    completed: Valmis
+    completed_plural: Valmis
+    contexts:
+      ":": ":"
+      active: Aktiiviset asiayhteydet
+      closed: Suljetut asiayhteydet
+      hidden: Piilotetut asiayhteydet
+    current: Ajan tasalla
+    current_plural: Ajan tasalla
+    hidden: Piilotettu
+    hidden_plural: Piilotettu
+    projects:
+      ":": ":"
+      active: Aktiiviset projektit
+      blocked: Estetyt
+      closed: Suljetut projektit
+      completed: Valmiit
+      current: Nykyinen
+      hidden: Piilotetut projektit
+      review: Käsittele
+      stalled: Odottaa
+    review: Päivätty
+    review_plural: Päivätty
+    stalled: Odottaa
+    stalled_plural: Odottaa
+    visible: Näkyvä
+    visible_plural: Näkyvä
+  stats:
+    action_completion_time_title: Valmistumisaika (kaikki valmistuneet toimenpiteet)
+    action_selection_title: TRACKS::Toimenpiteen valita
+    actions: Actions
+    actions_30days_title: Toimenpiteitä viimeisen 30 päivän sisällä
+    actions_actions_avg_created_30days: Viimeisen 30 päivän aikana olet luonut keskimäärin
+      %{count} toimenpidettä
+    actions_avg_completed: ja valmistunut keskimäärin %{count} toimenpidettä kuukaudessa.
+    actions_avg_completed_30days: ja sait valmiiksi keskimäärin %{count} toimenpidettä
+      päivässä.
+    actions_avg_completion_time: Kaikista valmistuneista toimenpiteistäsi keskiarvoinen
+      valmistumisaika on %{count} päivää.
+    actions_avg_created: Viimeisen 12 kuukauden aikana loit keskimäärin %{count} toimenpidettä
+    actions_day_of_week_legend:
+      day_of_week: Viikonpäivä
+      number_of_actions: Number of actions
+    actions_day_of_week_title: Viikonpäivä (kaikki toimenpiteet)
+    actions_dow_30days_legend:
+      day_of_week: Viikonpäivä
+      number_of_actions: Toimenpiteiden määrä
+    actions_dow_30days_title: Viikonpäivä (viimeiset 30 päivää)
+    actions_further: " ja myöhemmät"
+    actions_last_year: Toimenpidettä viimeisen vuoden aikana
+    actions_last_year_legend:
+      months_ago: Kuukautta sitten
+      number_of_actions: Number of actions
+    actions_lastyear_title: Toimenpidettä viimeisen 12 kuukauden aikana
+    actions_min_completion_time: Lyhyin valmistumisaika on %{time}.
+    actions_min_max_completion_days: Lyhin aika toimenpiteen valmistumiseen on %{min}
+      päivää ja pisin %{max} päivää.
+    actions_selected_from_week: 'Toimenpiteitä valittu viikolta '
+    click_to_return: Klikkaa %{link} palataksesi tilastosivulle.
+    click_to_return_link: tästä
+    click_to_show_actions_from_week: Klikkaa %{link} näyttääksesi toimenpiteet viikosta
+      %{week} eteenpäin.
+    click_to_update_actions: Klikkaa kaavion pylvästä päivittääksesi allaolevat toiminnot.
+    contexts: Asiayhteydet
+    current_running_time_of_incomplete_visible_actions: Keskeneräisten näkyvien toimenpiteiden
+      kestoaika
+    index_title: TRACKS::Tilastot
+    labels:
+      avg_completed: KA valmistuneet
+      avg_created: Keskimäärin luotu
+      completed: Valmistuneet
+      created: Luotu
+      month_avg_completed: "%{months} Kuukauden keskiarvo valmistuneet"
+      month_avg_created: "%{months} kuukauden keskiarvo luodut"
+    legend:
+      actions: Actions
+      day_of_week: Viikonpäivä
+      months_ago: Kuukautta sitten
+      number_of_actions: Number of actions
+      number_of_days: Määrää päiviä sitten
+      percentage: Prosentti
+      running_time: Toimenpiteen kesto (viikkoina)
+    more_stats_will_appear: Lisää tilastoja ilmestyy tänne, kun lisäät toimenpiteitä.
+    no_actions_selected: Ei valittuja toimenpiteitä.
+    no_tags_available: avainsanoja ei ole
+    open_per_week: Aktiiviset (näkyvät ja piilotetut) seuraavat toimenpiteet viikottain
+    open_per_week_legend:
+      actions: Actions
+      weeks: Viikkoa sitten
+    other_actions_label: "(muut)"
+    projects: Projektit
+    running_time_all: Tämänhetkinen juokseva aika kaikille keskeneräisille toimenpiteille
+    running_time_all_legend:
+      actions: Actions
+      percentage: Prosentti
+      running_time: Toimenpiteen kestoaika (viikkoa). Klikkaa pylvästä saadaksesi
+        lisätietoja
+    running_time_legend:
+      actions: Actions
+      percentage: Prosentti
+      weeks: Toimenpiteen kestoaika (viikkoa). Klikkaa pylvästä saadaksesi lisätietoja
+    spread_of_actions_for_all_context: Toimenpiteiden jakautuminen asiayhteyksille
+    spread_of_running_actions_for_visible_contexts: Näkyvissä asiayhteyksissä olevien
+      keskeneräisten toimenpiteiden jakauma
+    tag_cloud_90days_description: Tässä sanapilvessä ovat sellaisten toimenpiteiden
+      asiasanat, jotka on luotu tai saatu valmiiksi viimeisen 90 vuorokauden aikana.
+    tag_cloud_90days_title: Asiasanapilvi toimenpiteille viimeisen 90 päivän aikana
+    tag_cloud_description: Tässä sanapilvessä ovat kaikkien toimenpiteiden asiasanat
+      valmiudesta ja näkyvyydestä riippumatta
+    tag_cloud_title: Avainsanapilvi kaikille toimenpiteille
+    tags: Tags
+    time_of_day: Kellonaika (kaikki toimenpiteet)
+    time_of_day_legend:
+      number_of_actions: Toimenpiteiden määrä
+      time_of_day: Kellonaika
+    tod30: Kellonaika (viimeiset 30 vuorokautta)
+    tod30_legend:
+      number_of_actions: Number of actions
+      time_of_day: Kellonaika
+    top10_longrunning: 10 pisimpään jatkunutta projektia
+    top10_projects: Top 10 -projektit
+    top10_projects_30days: Top 10 -projektit viimeisen 30 päivän aikana
+    top5_contexts: Top 5 -asiayhteydet
+    top5_visible_contexts_with_incomplete_actions: Näkyvät top 5 -asiayhteydet tekemättömillä
+      toimenpiteillä
+    totals: Yhteensä
+    totals_action_count: sinulla on yhteensä %{count} toimenpidettä
+    totals_actions_completed: "%{count} näistä on valmistuneita."
+    totals_active_project_count: Joista %{count} on aktiivisia projekteja
+    totals_blocked_actions: "%{count} on riippuvaisia toimenpiteidensä valmistumisesta."
+    totals_completed_project_count: ja %{count} on valmistuneita projekteja.
+    totals_context_count: Sinulla on %{count} asiayhteyttä.
+    totals_deferred_actions: joista %{count} on lykättyjä toimenpiteitä muistilistassa
+    totals_first_action: Ensimmäisen toimenpiteesi %{date} jälkeen
+    totals_hidden_context_count: ja %{count} on piilotettuja asiayhteyksiä.
+    totals_hidden_project_count: "%{count} on piilotettu"
+    totals_incomplete_actions: Sinulla on %{count} keskeneräistä toimenpidettä
+    totals_project_count: Sinulla on %{count} projektia.
+    totals_tag_count: Sinulla on %{count} asiasanaa yhdistettynä toimenpiteisiin.
+    totals_unique_tags: Näistä avainsanoista %{count} on yksilöllisiä.
+    totals_visible_context_count: Näistä %{count} on näkyviä asiayhteyksiä
+    within_one: Yhden sisällä
+  support:
+    array:
+      last_word_connector: " ja "
+      two_words_connector: " ja "
+      words_connector: ", "
+    select:
+      prompt: Valitse
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      month_day: "%B %d"
+      short: "%d %b %H:%M"
+      stats: "%a %d-%m"
+      time: ''
+    pm: pm
+  todos:
+    action_deferred: Toimenpidettä ”%{description}” lykättiin
+    action_deleted_error: Toimenpiteen poistaminen epäonnistui
+    action_deleted_success: Seuraavan toimenpiteen poistaminen onnistui
+    action_due_on: "(määräaika %{date})"
+    action_marked_complete: Toimenpide <strong>”%{description}”</strong> merkittiin
+      <strong>%{completed}</strong>
+    action_marked_complete_error: Toimenpidettä <strong>”%{description}”</strong>
+      EI merkitty <strong>%{completed} palvelimen virheen vuoksi.</strong>
+    action_saved: Toimenpide tallennettu
+    action_saved_to_tickler: Toimenpide tallennettu muistilistaan
+    actions:
+      completed: Valmistuneet toimenpiteet
+      context_completed: Valmistuneet toimenpiteet tässä asiayhteydessä
+      context_deferred_pending: Asiayhteyden lykätyt/odottavat toimenpiteet
+      context_without_project: Projektittomat toimenpiteet %{param}
+      home_completed: Valmistuneet toimenpiteet
+      home_without_project: Toimenpiteet ilman projektia
+      project_completed: Valmistuneita toimenpiteitä tässä projektissa
+      project_deferred_pending: Tämän projektin lykätyt/odottavat toimenpiteet
+      project_project: Toimenpiteet tässä projektissa
+      tag_completed: Valmistuneet toimenpiteet avainsanalla ”%{param}”
+      tag_deferred_pending: Lykätyt/odottavat toimenpiteet asiasanalla ”%{param}”
+      tag_hidden: Tagilla '%{param}' merkityt piilotetut toimenpiteet
+    add_another_dependency: Lisää toinen riippuvuus
+    add_new_recurring: Lisää uusi toistuva toimenpide
+    added_dependency: Lisätty %{dependency} riippuvuudeksi.
+    added_new_context: Lisätty uusi asiayhteys
+    added_new_next_action: Lisätty uusi seuraava toimenpide
+    added_new_next_action_plural: Lisätty uusia seuraavia toimenpiteitä
+    added_new_next_action_singular: Lisätty uusi seuraava toimenpide
+    added_new_project: Uusi projekti lisätty
+    all_completed: Kaikki valmistuneet toimenpiteet
+    all_completed_here: täällä
+    all_completed_tagged_page_title: TRACKS::Kaikki valmistuneet toimenpiteet asiasanalla
+      %{tag_name}
+    append_in_this_project: tässä projektissa
+    archived_tasks_title: TRACKS::Arkistoidut valmistuneet toimenpiteet
+    blocked_by: '%{predecessors} estää'
+    calendar:
+      due_after_this_month: Tehtävä %{next_month} ja myöhemmin
+      due_next_week: Tehtävä ensi viikolla
+      due_this_month: Tehtävä loppukuukauden %{month} aikana
+      due_this_week: Tehtävä loppuviikon aikana
+      due_today: Tehtävä tänään
+      get_in_ical_format: Nouda tämä kalenteri iCal-muodossa
+    calendar_page_title: TRACKS::Kalenteri
+    cannot_add_dependency_to_completed_todo: Toimenpidettä ei voi lisätä riippuvuutena
+      valmistuneelle toimenpiteelle!
+    clear_due_date: Tyhjennä määräpäivä
+    clear_show_from_date: Tyhjennä Näytä alkaen -ajankohta
+    completed: Valmistunut
+    completed_actions: Valmistuneet toimenpiteet
+    completed_actions_with: Valmistuneet toimenpiteet asiasanalla %{tag_name}
+    completed_in_archive:
+      one: Arkistossa on valmistunut toimenpide.
+      other: Arkistossa on %{count} valmistunutta toimenpidettä.
+    completed_last_day: Valmistunut viimeisen 24 tunnin sisällä
+    completed_last_x_days: Valmistunut viimeisen %{count} päivän sisällä
+    completed_recurrence_completed: Poistamasi toistuvan toimenpiteen jälkeen ei ole
+      muita toimenpiteitä. Toistuvuus on päättynyt
+    completed_recurring: Valmistuneet toistuvat toimenpiteet
+    completed_recurring_actions_title: TRACKS::Valmistuneet toistuvat toimenpiteet
+    completed_rest_of_month: Valistunut loppukuukauden aikana
+    completed_rest_of_previous_month: Viime kuukauden loppuosassa valmistuneet
+    completed_rest_of_week: Viikon lopulla valmistuneet
+    completed_tagged_page_title: TRACKS::Valmistuneet toimenpiteet asiasanalla %{tag_name}
+    completed_tasks_title: TRACKS::Valmistuneet toimenpiteet
+    completed_today: Valmistunut tänään
+    confirm_delete: Oletko varma että haluat poistaa toimenpiteen ”%{description}”?
+    context_changed: Asiayhteys vaihdettu %{name}
+    convert_to_project: Muuta projektiksi
+    defer_date_after_due_date: Lykkäyspäivä on määräpäivän jälkeen. Muuta määräpäivää
+      ennen lykkäämistä.
+    defer_x_days:
+      one: Lykkää 1 päivä
+      other: Lykkää %{count} päivää
+    deferred_actions_with: Lykätyt toimenpiteet asiasanalla %{tag_name}
+    deferred_pending_actions: Lykätyt/odottavat toimenpiteet
+    deferred_tasks_title: TRACKS::Muistilista
+    delete: Poista
+    delete_action: Poista toimenpide
+    delete_recurring_action_confirm: Haluatko varmasti poistaa toistuvan toimenpiteen
+      ”%{description}”?
+    delete_recurring_action_title: Poista toistuva toimenpide
+    deleted_success: Toimenpiteen poisto onnistui.
+    depends_on: Riippuu
+    depends_on_separate_with_commas: Riippuu (pilkuilla erotettuna)
+    done: Valmis?
+    drag_action_title: Raahaa toisen toimenpiteen päälle merkitäksesi sen tämän toimenpiteen
+      riippuvuudeksi.
+    due: Määräpäivä
+    edit: Muokkaa
+    edit_action: Muokkaa toimenpidettä
+    edit_action_with_description: Muokkaa toimenpidettä ”%{description}”
+    edit_recurring_todo: Muokkaa toistuvaa toimenpidettä
+    error:
+      invalid_due_date: Virheellinen määräpäivä
+      invalid_show_from_date: Virheellinen Näytä alkaen -ajankohta
+    error_completing_todo: Toistuvan toimenpiteen %{description} valmiiksi merkitsemisessä
+      / aktivoinnissa tapahtui virhe
+    error_deleting_item: '%{description} poistossa tapahtui virhe'
+    error_deleting_recurring: Toistuvan toimenpiteen ”%{description}” poistamisessa
+      tapahtui virhe
+    error_removing_dependency: Riippuvuuden poistaminen epäonnistui
+    error_saving_recurring: Toistuvan toimenpiteen ”%{description}” tallennuksessa
+      tapahtui virhe
+    error_starring: Toimenpiteen ”%{description}” tähtimerkinnän vaihtaminen epäonnistui
+    error_starring_recurring: Toistuvan toimenpiteen ”%{description}” tähtimerkinnän
+      vaihto epäonnistui
+    error_toggle_complete: Toimenpiteen merkitseminen valmiiksi epäonnistui
+    feed_title_in_context: in context '%{context}'
+    feed_title_in_project: in project '%{project}'
+    feeds:
+      completed: 'Valmistunut: %{date}'
+      due: 'Tehtävä: %{date}'
+    has_x_pending:
+      one: On yksi odottava toimenpide
+      other: On %{count} odottavaa toimenpidettä
+    hidden_actions: Piilotetut toimenpiteet
+    in_hidden_state: piilotetussa tilassa
+    in_pending_state: odottavassa tilassa
+    list_incomplete_next_actions: Listaa keskeneräiset seuraavat toimenpiteet
+    list_incomplete_next_actions_with_limit: Listaa viimeiset %{count} keskeneräistä
+      seuraavaa toimenpidettä
+    mark_complete: Merkitse valmiiksi
+    mobile_todos_page_title: Kaikki toimenpiteet
+    new_related_todo_created: Lisätty uusi toimenpide joka kuuluu tähän toistuvaan
+      toimenpiteeseen
+    new_related_todo_created_short: uusi toimenpide luotu
+    new_related_todo_not_created_short: uutta toimenpidettä ei luotu
+    next_action_description: Next action description
+    next_action_needed: Sinun tulee tallentaa ainakin yksi seuraava toimenpide
+    next_actions_description: 'Filter:'
+    next_actions_description_additions:
+      completed: viimeisessä %{count} vuorokaudessa
+      due_date: määräpäivällä %{due_date} tai aiempi
+    next_actions_due_date:
+      due_in_x_days: Määräaika %{days} päivän päästä
+      due_today: Tehtävä tänään
+      due_tomorrow: Tehtävä huomenna
+      overdue_by: Myöhässä %{days} päivää
+      overdue_by_plural: Myöhässä %{days} päivää
+    next_actions_title: Tracks - Next Actions
+    next_actions_title_additions:
+      completed: valmiita toimenpiteitä
+      due_today: tehtävä tänään
+      due_within_a_week: tehtävä viikon sisällä
+    no_actions:
+      completed: Valmiita toimenpiteitä ei löytynyt
+      completed_recurring: Valmistuneita toistuvia toimenpiteitä ei ole
+      completed_rest_of_month: Kuukauden loppuosan aikana ei valmistunut toimenpiteitä
+      completed_rest_of_week: Viikon loppuosan aikana ei valmistunut toimenpiteitä
+      completed_today: Tänään aikana ei valmistunut toimenpiteitä
+      context: Tässä asiayhteydessä ei ole keskeneräisiä toimenpiteitä
+      deferred_pending: Ei lykättyjä tai odottavia toimenpiteitä
+      due_after_this_month: Ei tämän kuun jälkeen tehtäviä toimenpiteitä
+      due_next_week: Ei viikon sisällä erääntyviä toimenpiteitä
+      due_this_month: Ei loppukuukauden aikana erääntyviä toimenpiteitä
+      due_this_week: Ei tällä viikolla tehtäviä toimenpiteitä
+      due_today: Ei tänään tehtäviä toimenpiteitä
+      hidden: Piilotettuja toimenpiteitä ei ole
+      not_done: Keskeneräisiä toimenpiteitä ei ole
+      not_done_context: Tähän kontekstiin kuuluvia keskeneräisiä toimenpiteitä ei
+        löytynyt
+      not_done_project: Tähän projektiin kuuluvia keskeneräisiä toimenpiteitä ei löytynyt
+      not_done_with_tag: Tagilla '%{param}' merkittyjä keskeneräisiä toimenpiteitä
+        ei löytynyt
+      project: Tässä projektissa ei ole keskeneräisiä toimenpiteitä
+      recurring_todos: Toistuvia toimenpiteitä ei ole
+      tag_hidden: Piilotettuja toimenpiteitä ei ole
+      title: Toimenpiteitä ei löytynyt
+      without_project: Projektittomia toimenpiteitä ei ole
+    no_actions_due_this_week: Ei loppuviikon aikana erääntyviä toimenpiteitä
+    no_actions_found_title: Toimenpiteitä ei löytynyt
+    no_actions_with: No actions with
+    no_completed_actions: Valmistuneita toimenpiteitä ei ole
+    no_completed_actions_with: Toimenpiteitä ei löytynyt ehdolla
+    no_completed_recurring: Ei valmistuneita toistuvia
+    no_deferred_actions: Ei lykättyjä toimenpiteitä
+    no_deferred_actions_with: Lykättyjä toimenpiteitä ei löytynyt ehdolla
+    no_last_completed_actions: Valmistuneita toimenpiteitä ei ole
+    no_project: "--No project--"
+    no_recurring_todos: Ei toistuvia toimenpiteitä
+    notes: Muistiinpanot
+    overdue: Myöhässä
+    pending: Odottaa
+    recurrence:
+      daily: Päivittäin
+      daily_every_number_day: Joka %{number} päivä
+      daily_options: Asetukset päivittäin toistuville toimenpiteille
+      day_x_on_every_x_month: Päivä %{day} joka %{month} kuukausi
+      ends_on: Päättyy
+      ends_on_date: Päättyy %{date}
+      ends_on_number_times: Päättyy %{number} toiston jälkeen
+      every_work_day: Joka työpäivä
+      monthly: Kuukausittain
+      monthly_every_xth_day: '%{day} %{day_of_week} joka %{month} kuukausi'
+      monthly_options: Asetukset kuukausittain toistuville toimenpiteille
+      no_end_date: Ei päättymispäivää
+      pattern:
+        day_names:
+        - sunnuntai
+        - maanantai
+        - tiistai
+        - keskiviikko
+        - torstai
+        - perjantai
+        - lauantai
+        due: tehtävä
+        every_day: joka päivä
+        every_month: joka kuukausi
+        every_n: joka %{n}
+        every_n_days: joka %{n}. päivä
+        every_n_months: joka %{n}. kuukausi
+        every_xth_day_of_every_n_months: joka %{x} %{day} joka %{n_months}
+        every_year_on: joka vuosi %{date}
+        first: ensimmäinen
+        fourth: neljäs
+        from: alkaen
+        last: viimeinen
+        month_names:
+        - 
+        - Tammikuu
+        - Helmikuu
+        - Maaliskuu
+        - Huhtikuu
+        - Toukokuu
+        - Kesäkuu
+        - Heinäkuu
+        - Elokuu
+        - Syyskuu
+        - Lokakuu
+        - Marraskuu
+        - Joulukuu
+        on_day_n: '%{n}. päivänä'
+        on_work_days: työpäivinä
+        second: Toinen
+        show: näytä
+        the_xth_day_of_month: '%{x}. %{day} %{month}'
+        third: kolmas
+        times: '%{number} kertaa'
+        until: asti
+        weekly: viikottain
+      recurrence_on:
+        due_date: toimenpiteen määräpäivän asettamiseen
+        from_tickler: toimenpiteen näyttämispäivän asettamiseen (älä aseta määräpäivää)
+        options: Käytä laskettua päivää
+        show_always: aina
+        show_days_before: vasta %{days} päivä(ä) ennen määräpäivää
+        show_options: Näytä toimenpide
+      starts_on: Alkaa
+      weekly: Viikottain
+      weekly_every_number_week: Näytetään joka %{number} viikko
+      weekly_options: Asetukset viikottain toistuville toimenpiteille
+      yearly: Vuosittain
+      yearly_every_x_day: Joka %{month} %{day}
+      yearly_every_xth_day: '%{day}. %{day_of_week} %{month}'
+      yearly_options: Asetukset vuosittaisille toistuville toimenpiteille
+    recurrence_completed: Valmistuneen toistuvan toimenpiteen jälkeen ei ole muita
+      toimenpiteitä. Toistuvuus on päättynyt
+    recurrence_period: Toistuvuusjakso
+    recurring_action_deleted: Toimenpide poistettiin. Koska toimenpide on toistuva,
+      uusi lisättiin
+    recurring_action_saved: Toistuva toimenpide tallennettu
+    recurring_actions_title: TRACKS::Toistuvat toimenpiteet
+    recurring_deleted_success: Toistuvan toimenpiteen poisto onnistui.
+    recurring_pattern_removed: Toistuvuusmekanismi poistettiin %{count}
+    recurring_todos: Toistuvat toimenpiteet
+    remove_dependency: Poista riippuvuus (ei poista toimenpidettä)
+    removed_predecessor: Poistettu %{successor} riippuvuus toimenpiteestä %{predecessor}.
+    scheduled_overdue: Ajastettu näkymään %{days} päivän päästä
+    see_all_completed: Näet kaikki valmistuneet toimenpiteet %{link}
+    set_to_pending: "%{task} asetettu odottamaan"
+    show_from: Näytä alkaen
+    show_in_days: Näytetään %{days} päivän kuluttua
+    show_on_date: Näytä %{date}
+    show_today: Näytä tänään
+    show_tomorrow: Näytä huomenna
+    star_action: Merkitse toimenpide tähdellä
+    star_action_with_description: merkitse toimenpide ”%{description}” tähdellä
+    tagged_page_title: TRACKS::Merkitty asiasanalla ”%{tag_name}”
+    tagged_with: merkitty asiasanalla ”%{tag_name}”
+    tags: Avainsanat (erota pilkulla)
+    task_list_title: TRACKS::Listaa toimenpiteet
+    tickler_items_due:
+      one: Yksi muistilistan merkintä on nyt ajankohtainen – päivitä sivu nähdäksesi
+        sen.
+      other: '{%count} muistilistan merkintää on nyt ajankohtaisia – päivitä sivu
+        nähdäksesi ne.'
+    to_tickler: muistilistaan
+    unable_to_add_dependency: Riippuvuuden lisääminen epäonnistui
+    unresolved_dependency: Riippuvuuskenttään syöttämäsi arvo ei täsmännyt mihinkään
+      toimenpiteeseen. Arvoa ei tallenneta. Haluatko jatkaa?
+    was_due_on_date: oli tehtävä viimeistään %{date}
+  users:
+    account_signup: Käyttäjätilin rekisteröiminen
+    approve_tos: Hyväksyn käyttöehdot
+    auth_change_submit: Muuta tunnistautumistyyppiä
+    auth_type_update_error: 'Tunnistautumistyyppisi päivittämisessä tapahtui virhe:
+      %{error_messages}'
+    auth_type_updated: Tunnistautumistyyppi muutettu.
+    change_auth_type_title: TRACKS::Muuta tunnistautumistyyppiä
+    change_authentication_type: Muuta tunnistautumistyyppiä
+    change_password_prompt: Syötä uusi salasanasi allaoleviin kenttiin ja klikkaa
+      ”Vaihda salasana” vaihtaaksesi salasanasi.
+    change_password_submit: Vaihda salasana
+    change_password_title: TRACKS::Vaihda salasana
+    choose_password: Valitse salasana
+    confirm_password: Vahvista salasana
+    desired_login: Toivottu käyttäjätunnus
+    destroy_confirmation: 'Varoitus: Tämä poistaa käyttäjän ”%{login}”, kaikki toimenpiteet,
+      asiayhteydet, projektit ja muistiinpanot. Oletko varma että haluat jatkaa?'
+    destroy_error: Käyttäjän %{login} poistamisessa tapahtui virhe
+    destroy_successful: Käyttäjä %{login} poistettiin onnistuneesti
+    destroy_user: Poista käyttäjä
+    email_address: Sähköpostiosoite
+    failed_to_delete_user: Käyttäjän %{username} poistaminen epäonnistui
+    first_user_heading: 'Tervetuloa Tracksiin! Päästäksesi alkuun luo ylläpitäjän
+      käyttäjätunnus:'
+    first_user_title: TRACKS::Sign up as the admin user
+    identity_url: Henkilöllisyys-URL
+    label_auth_type: Tunnistautumistyyppi
+    manage_users: Hallitse käyttäjiä
+    manage_users_title: TRACKS::Hallitse käyttäjiä
+    new_password_label: Uusi salasana
+    new_token_generated: Uusi avainkoodi luotu onnistuneesti
+    new_user_heading: 'Rekisteröi uusi käyttäjä:'
+    new_user_title: TRACKS::Rekisteröidy
+    no_signups_title: TRACKS::Ei rekisteröitymisiä
+    openid_ok_pref_failed: Olet onnistuneesti varmentanut %{url} henkilöllisyydeksesi,
+      mutta tunnistautumisasetustesi tallennuksessa tapahtui virhe.
+    openid_url_verified: Olet onnistuneesti varmentanut %{url} henkilöllisyydeksesi
+      ja asettanut tunnistautumistyypiksesi OpenID:n.
+    password_confirmation_label: Vahvista salasana
+    password_updated: Salasana päivitetty.
+    register_with_cas: CAS-käyttäjätunnuksellasi
+    select_authentication_type: Valitse uusi tunnistautumistyyppisiä ja klikkaa ”Vaihda
+      tunnistautumistyyppiä” korvataksesi nykyiset asetuksesi.
+    signup: Rekisteröidy
+    signup_new_user: Rekisteröi uusi käyttäjä
+    signup_successful: Käyttäjän %{username} rekisteröityminen onnistui.
+    successfully_deleted_user: Käyttäjän %{username} poistaminen onnistui
+    tos_link: lue käyttöehdot
+    total_actions: Yhteensä toimenpiteitä
+    total_contexts: Yhteensä asiayhteyksiä
+    total_notes: Yhteensä muistiinpanoja
+    total_projects: Yhteensä projekteja
+    total_users_count: Sinulla on yhteensä %{count} käyttäjää
+    user_created: Käyttäjä luotu.
+    you_have_to_reset_your_password: Palauta salasanasi
+  will_paginate:
+    next_label: Seuraava &#8594;
+    page_entries_info:
+      multi_page: Näytetään %{model} %{from} - %{to} yhtensä %{count} tietueesta
+      multi_page_html: Näytetään %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> yhteensä
+        <b>%{count}</b> tietueesta
+      single_page:
+        one: Näytetään 1 %{model}
+        other: Näytetään kaikki %{count} %{model}
+        zero: '%{model} ei löytynyt'
+      single_page_html:
+        one: Näytetään <b>1</b> %{model}
+        other: Näytetään <b>kaikki&nbsp;%{count}</b> %{model}
+        zero: '%{model} ei löytynyt'
+    page_gap: "&hellip;"
+    previous_label: "&#8592; Edellinen"
+  auth_type:
+    database: Tietokanta
+  rest_help:
+    writing:
+      example_todo_name: Mallinna puumaja SketchUpilla
+      title: Rajapintaan kirjoittaminen
+      example_title: 'Luo uusi projekti curlilla:'
+      example_project_name: Rakenna puumaja lapsille
+      example_project_response_title: 'Vastaus on %{response_code} yhdessä otsakkeen
+        %{header} kanssa, joka osoittaa mistä uusi projektiresurssi löytyy. Nyt voimme
+        lisätä tähän projektiin uuden tehtävän käyttäen curlia:'
+      example_delete_response_title: Rajapinta palauttaa %{response_code} ja tehtävä
+        on nyt poistettu.
+      example_delete_title: 'Kun haluamme poistaa tehtävän, kutsumme sen yksilöllistä
+        resurssitunnistetta (URL-osoite) HTTP-metodilla %{delete}, jälleen curlilla:'
+      example_todo_response_title: 'Vastaus on jälleen %{response_code} yhdessä otsakkeen
+        %{header} kanssa, joka osoittaa mistä uusi tehtäväresurssi löytyy. Tehtävän
+        muistiinpanojen muuttaminen, jälleen curlilla:'
+      example_note_response_title: 'Vastaus on %{response_code} ja sen rungossa on
+        päivitetty tehtävä XML-muotoisena. Tarjoamme helpomman tavan muuttaa tehtävä
+        tehdyksi tai tekemättömäksi ilman tarvetta päivitysoperaation tekemiselle
+        kenttäarvoilla:'
+      description: Rajapinta tarjoaa mekanismit resurssien lisäämiseen, päivittämiseen
+        ja poistamiseen käyttämällä %{put}, %{post} ja %{delete} yhdessä sisällön
+        kanssa.
+      example_note_text: käytä vaahterakuviota
+    title: REST-rajapinnan dokumentaatio kehittäjille
+    intro:
+      title: Esittely
+      content_2: Tracksin REST-rajapinnan avulla kehittäjät voivat integroida Tracksin
+        sovelluksiinsa. Sen avulla sovellukset voivat lukea ja muuttaa Tracksiin tallennettuja
+        tietoja ja se on toteutettu XML:nä HTTP:n yli.
+      restful_link_text: RESTful
+      content: Tracks on suunniteltu integroitavaksi skripteihin, verkkopalveluihin
+        ja kolmannen osapuolen sovelluksiin. Tämä sivu toimii REST-rajapintamme dokumentaationa.
+      content_3: Rajapinta on %{restful_link}-palvelu. Kaikki tieto on saatavilla
+        rajapinnan kautta resursseina, joihin voidaan viitata yksilöllisellä tunnisteella.
+        Rajapinta vastaa lajitelmaan HTTP-kutsuja (GET, PUT, POST ja UPDATE) ja kaikki
+        rajapinnan vastaukset ovat XML-muotoiltua UTF-8:aa.
+    auth:
+      title: Tunnistautuminen
+      content: Tunnistautuminen tapahtuu %{auth_link}. Tracksin käyttäjätunnusta ja
+        salasanaa käytetään rajapinnan tunnisteina. Huomaathan, että Basic-HTTP-tunnistautumisessa
+        salasanasi lähetetään pelkkänä tekstinä. Jos tarvitset turvallisempaa tunnistautumisratkaisua,
+        asenna verkkopalvelimesi palvelemaan Tracks HTTPS:n yli.
+      basic_auth_link_text: Basic-HTTP-tunnistautuminen
+    retrieve:
+      content: 'Noutaaksesi tietoa sinun tarvitsee vain tehdä HTTP GET-pyyntö resurssitunnisteella.
+        Esimerkiksi jos haluat hakea kaikki asiayhteydet %{curl_link}illa:'
+      single_context: 'Yksittäisen asiayhteyden noutaminen:'
+      todos_from_context: 'Asiayhteyteen kuuluvien tehtävien noutaminen:'
+      projects: Voit käyttää yllä esitettyä muotoa myös projekteilla asiayhteyksien
+        sijaan.
+      paths_title: 'Kaikki tiedot ovat saatavilla seuraavissa resurssipoluissa:'
+      active_todos: 'Jos haluat noutaa vain aktiiviset tehtävät, voit lisätä parametrin
+        %{active_code} ja asettaa siihen jonkin arvon, kuten:'
+      title: Tiedon noutaminen rajapinnasta
+      limit: 'Tehtäväresursseille (tehtävät, tickler, tehdyt, piilotetut ja kalenteri)
+        voit palauttaa vain kentät %{fields} lisäämällä parametrin %{limit_parameter}
+        ja asettamalla sen arvoksi %{set_to}. Esimerkiksi:'
+    notes:
+      description: 'Ohjeessa on noudatettu muutamia merkintötapoja:'
+      curl_description: Kaikki esimerkit käyttävät %{curl}ia.
+      bullet2: '%{omit} osoittaa että epäolennaisia osuuksia vastaustiedosta on jätetty
+        pois ohjeen selkiyttämiseksi'
+      bullet1: '%{id} resurssin %{url} osoittavat että se tulee korvata resurssin
+        yksilöllisellä tunnisteella'
+      title: Huomioita ohjeesta
+    activeresource:
+      title: Rajapinnan käyttäminen ActiveResourcella
+      wrapper_description: '%{signals_link}in Highrise-wrapperin innostamana teimme
+        pienen Ruby-wrapperin (löytyy doc/-hakemistosta) rajapinnalle joka luo sinulle
+        ActiveResource-mallit joilla voit leikkiä IRB-istunnossa:'
+      ror_link_text: Ruby on Rails
+      signals_link_text: 37 Signals
+      activeresource_link_text: ActiveResource
+      description: '%{activeresource_link} on ohut mutta hyödyllinen RESTful-palveluiden
+        ympärillä %{ror_link}issa oleva palvelu. Se tulee olemaan osa Rails 2.0:aa,
+        mutta siihen asti voit noutaa sen %{gem_command}.'
+    response:
+      xml_description: 'XML tyhjälle listalle näyttää tältä, jälleen curlilla:'
+      title: Vastauksen ja vastauskoodin käsittely
+      description: Kaikki onnistuneet toiminnot palauttavat tilakoodin %{response_200}
+        tai %{response_201} riippuen toiminnosta. Joissain tapauksissa listassa, esimerkiksi
+        %{example_call} ei ole lainkaan tuloksia, jolloin palautetaan tyhjä lista.
+    curl_link_text: cURL
+    id: ID

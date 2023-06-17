@@ -1,0 +1,42 @@
+.navbar {
+  /* Shows the count of undone next actions */
+  .badge {
+    color: #fff;
+    background: #f00;
+    display: inline;
+    padding: 3px 5px;
+    font-size: 12pt;
+    height:26px;
+    border-radius: 2px;
+  }
+
+  .fa {
+    line-height: inherit;
+  }
+}
+
+.footer {
+  @include make-xs-column(12);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+  font-size: 85%;
+  text-align: center;
+  color: #999;
+  margin: 20px 0 5px;
+  z-index: -1;
+}
+
+.footer-line {
+  display: block;
+}
+
+form {
+  border: 0px none;
+  padding: 0;
+}
+
+@media screen and (min-width: 1170px) {
+  .footer-line {
+    display: inline;
+  }
+}

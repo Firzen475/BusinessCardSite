@@ -1,0 +1,25 @@
+
+Start-Date: 2022-09-05  13:23:25
+Commandline: apt-get install dnsutils -y
+Install: bind9-dnsutils:amd64 (1:9.16.32-1+ubuntu20.04.1+isc+1, automatic), bind9-host:amd64 (1:9.16.32-1+ubuntu20.04.1+isc+1, automatic), dnsutils:amd64 (1:9.16.32-1+ubuntu20.04.1+isc+1), libedit2:amd64 (3.1-20191231-1, automatic)
+End-Date: 2022-09-05  13:23:25
+
+Start-Date: 2022-09-05  13:25:46
+Commandline: apt-get install iputils-ping
+Install: iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-09-05  13:25:46
+
+Start-Date: 2022-09-05  14:11:32
+Commandline: apt install iputils-ping
+Install: iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-09-05  14:11:32
+
+Start-Date: 2022-09-05  18:03:47
+Commandline: apt install iputils-ping
+Install: iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-09-05  18:03:48
+
+Start-Date: 2022-09-05  18:06:51
+Commandline: apt install iputils-ping
+Install: iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-09-05  18:06:51

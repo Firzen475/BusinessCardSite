@@ -1,0 +1,152 @@
+
+.transparence_2{
+    --background-color_bc: rgba(0, 0, 0, 0.2);
+}
+
+.transparence_4{
+    --background-color_bc: rgba(0, 0, 0, 0.4);
+}
+
+.transparence_6{
+    --background-color_bc: rgba(0, 0, 0, 0.6);
+}
+
+.transparence_8{
+    --background-color_bc: rgba(0, 0, 0, 0.8);
+}
+
+.indent_10{
+    display: inline-block;
+    /*margin: 10%;*/
+    /*padding: auto;*/
+    padding-bottom: 5px;
+    position: relative;
+    padding-inline: 5%;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+    /*margin: auto;*/
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_image{
+    /*position: fixed;*/
+
+    /*width: 100vw;*/
+    /*margin: 3rem 0;*/
+    /*margin-left: -webkit-calc(-1 * (100vw - 400px) / 2);
+    margin-left: calc(-1 * (100vw - 400px) / 2);*/
+    background-size:cover;
+    background-position:center;
+    /*z-index: 0;*/
+    /*padding-left: -100px;*/
+
+
+}
+
+.border_container{
+    display: flex;
+    position: relative;
+    /*width: 100%;*/
+    height: 100%;
+    max-height: 700px;;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+    background-color:var(--background-color_bc);
+    border-radius: 10px;
+    border: white;
+    box-shadow:
+            0 0 1px #fff,
+            0 0 2px #fff,
+            0 0 5px #fff,
+            0 0 11px #4230b3,
+            0 0 20px #4230b3,
+            0 0 30px #4230b3,
+            0 0 55px #4230b3,
+            0 0 80px #4230b3;
+    color: #fff;
+    overflow: hidden;
+}
+
+
+
+.bg_cove{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*margin: 10%;*/
+    opacity: 0.6;
+    background-color:#212529; /* Цвет фона */
+    border-radius: 10px; /* Уголки */
+    /*padding-inline: 5px;*/ /* Поля вокруг текста */
+}
+
+.web_links_image{
+    background-image: url("../../../img/web_dev.jpg");
+}
+
+.database_image{
+    background-image: url("../../../img/database.jpg");
+}
+
+.web_storage_image{
+    background-image: url("../../../img/web_storage.jpg");
+}
+
+.ftp_image{
+    background-image: url("../../../img/ftp.webp");
+}
+
+@media (max-width: 575.98px) {
+    .border_container{
+        width: 100%;
+    }
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .border_container{
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .border_container{
+        width: 80%;
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .border_container{
+        width: 75%;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+
+    .border_container{
+        width: 70%;
+    }
+}

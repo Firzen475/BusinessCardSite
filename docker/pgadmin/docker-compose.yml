@@ -1,0 +1,38 @@
+version: "3.3"
+services:
+  pgadmin:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: pgadmin
+#    entrypoint: env
+#    environment:
+#      - TEST="123"
+#    env_file:
+#      - secret.env
+#    container_name: test
+    ports:
+      - 9998:5050
+      - 9999:443
+#      - 8200:82
+#      - 8300:83
+#      - 4430:443
+#      - 4440:444
+#      - 4450:445
+#      - 4460:446
+#    volumes:
+#      - /home/user/www:/var/www/html
+#      - /etc/ssl/resource:/etc/ssl/common
+#      - /var/log/docker_apache:/var/log/apache2
+#      - nfs-data:/mnt/NFS
+#    networks:
+      # you may set custom IP addresses
+#      front:
+#        ipv4_address: 172.16.238.10
+#    entrypoint: env
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=firzen475@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=123
+#      - HTTPS_PORT_TEST_2=4450
+#      - HTTPS_PORT_TEST_3=4460
+#    restart: always

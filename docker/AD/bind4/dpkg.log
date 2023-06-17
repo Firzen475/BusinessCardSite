@@ -1,0 +1,70 @@
+2022-09-05 13:23:25 startup archives unpack
+2022-09-05 13:23:25 install bind9-host:amd64 <none> 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-installed bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status unpacked bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 install libedit2:amd64 <none> 3.1-20191231-1
+2022-09-05 13:23:25 status triggers-pending libc-bin:amd64 2.31-0ubuntu9.9
+2022-09-05 13:23:25 status half-installed libedit2:amd64 3.1-20191231-1
+2022-09-05 13:23:25 status unpacked libedit2:amd64 3.1-20191231-1
+2022-09-05 13:23:25 install bind9-dnsutils:amd64 <none> 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-installed bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status unpacked bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 install dnsutils:all <none> 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-installed dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status unpacked dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 startup packages configure
+2022-09-05 13:23:25 configure libedit2:amd64 3.1-20191231-1 <none>
+2022-09-05 13:23:25 status unpacked libedit2:amd64 3.1-20191231-1
+2022-09-05 13:23:25 status half-configured libedit2:amd64 3.1-20191231-1
+2022-09-05 13:23:25 status installed libedit2:amd64 3.1-20191231-1
+2022-09-05 13:23:25 configure bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1 <none>
+2022-09-05 13:23:25 status unpacked bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-configured bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status installed bind9-host:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 configure bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1 <none>
+2022-09-05 13:23:25 status unpacked bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-configured bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status installed bind9-dnsutils:amd64 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 configure dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1 <none>
+2022-09-05 13:23:25 status unpacked dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status half-configured dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 status installed dnsutils:all 1:9.16.32-1+ubuntu20.04.1+isc+1
+2022-09-05 13:23:25 trigproc libc-bin:amd64 2.31-0ubuntu9.9 <none>
+2022-09-05 13:23:25 status half-configured libc-bin:amd64 2.31-0ubuntu9.9
+2022-09-05 13:23:25 status installed libc-bin:amd64 2.31-0ubuntu9.9
+2022-09-05 13:25:46 startup archives unpack
+2022-09-05 13:25:46 install iputils-ping:amd64 <none> 3:20190709-3
+2022-09-05 13:25:46 status half-installed iputils-ping:amd64 3:20190709-3
+2022-09-05 13:25:46 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 13:25:46 startup packages configure
+2022-09-05 13:25:46 configure iputils-ping:amd64 3:20190709-3 <none>
+2022-09-05 13:25:46 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 13:25:46 status half-configured iputils-ping:amd64 3:20190709-3
+2022-09-05 13:25:46 status installed iputils-ping:amd64 3:20190709-3
+2022-09-05 14:11:32 startup archives unpack
+2022-09-05 14:11:32 install iputils-ping:amd64 <none> 3:20190709-3
+2022-09-05 14:11:32 status half-installed iputils-ping:amd64 3:20190709-3
+2022-09-05 14:11:32 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 14:11:32 startup packages configure
+2022-09-05 14:11:32 configure iputils-ping:amd64 3:20190709-3 <none>
+2022-09-05 14:11:32 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 14:11:32 status half-configured iputils-ping:amd64 3:20190709-3
+2022-09-05 14:11:32 status installed iputils-ping:amd64 3:20190709-3
+2022-09-05 18:03:47 startup archives unpack
+2022-09-05 18:03:48 install iputils-ping:amd64 <none> 3:20190709-3
+2022-09-05 18:03:48 status half-installed iputils-ping:amd64 3:20190709-3
+2022-09-05 18:03:48 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 18:03:48 startup packages configure
+2022-09-05 18:03:48 configure iputils-ping:amd64 3:20190709-3 <none>
+2022-09-05 18:03:48 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 18:03:48 status half-configured iputils-ping:amd64 3:20190709-3
+2022-09-05 18:03:48 status installed iputils-ping:amd64 3:20190709-3
+2022-09-05 18:06:51 startup archives unpack
+2022-09-05 18:06:51 install iputils-ping:amd64 <none> 3:20190709-3
+2022-09-05 18:06:51 status half-installed iputils-ping:amd64 3:20190709-3
+2022-09-05 18:06:51 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 18:06:51 startup packages configure
+2022-09-05 18:06:51 configure iputils-ping:amd64 3:20190709-3 <none>
+2022-09-05 18:06:51 status unpacked iputils-ping:amd64 3:20190709-3
+2022-09-05 18:06:51 status half-configured iputils-ping:amd64 3:20190709-3
+2022-09-05 18:06:51 status installed iputils-ping:amd64 3:20190709-3

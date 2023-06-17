@@ -1,0 +1,53 @@
+
+Log started: 2022-09-05  13:23:25
+Selecting previously unselected package bind9-host.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8335 files and directories currently installed.)
+Preparing to unpack .../bind9-host_1%3a9.16.32-1+ubuntu20.04.1+isc+1_amd64.deb ...
+Unpacking bind9-host (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../libedit2_3.1-20191231-1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20191231-1) ...
+Selecting previously unselected package bind9-dnsutils.
+Preparing to unpack .../bind9-dnsutils_1%3a9.16.32-1+ubuntu20.04.1+isc+1_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Selecting previously unselected package dnsutils.
+Preparing to unpack .../dnsutils_1%3a9.16.32-1+ubuntu20.04.1+isc+1_all.deb ...
+Unpacking dnsutils (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Setting up libedit2:amd64 (3.1-20191231-1) ...
+Setting up bind9-host (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Setting up bind9-dnsutils (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Setting up dnsutils (1:9.16.32-1+ubuntu20.04.1+isc+1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Log ended: 2022-09-05  13:23:25
+
+Log started: 2022-09-05  13:25:46
+Selecting previously unselected package iputils-ping.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8367 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Setting up iputils-ping (3:20190709-3) ...
+Log ended: 2022-09-05  13:25:46
+
+Log started: 2022-09-05  14:11:32
+Selecting previously unselected package iputils-ping.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10942 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Setting up iputils-ping (3:20190709-3) ...
+Log ended: 2022-09-05  14:11:32
+
+Log started: 2022-09-05  18:03:47
+Selecting previously unselected package iputils-ping.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10942 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Setting up iputils-ping (3:20190709-3) ...
+Log ended: 2022-09-05  18:03:48
+
+Log started: 2022-09-05  18:06:51
+Selecting previously unselected package iputils-ping.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10942 files and directories currently installed.)
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Setting up iputils-ping (3:20190709-3) ...
+Log ended: 2022-09-05  18:06:51

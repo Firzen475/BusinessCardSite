@@ -1,0 +1,187 @@
+
+.carousel{
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.slide_holder{
+    scroll-snap-type: x mandatory;
+    height: 100%;
+    width: 100%;
+    flex-flow: row nowrap;
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    overflow: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+
+}
+
+.slide_holder::-webkit-scrollbar {
+    width: 0px; /* ширина для вертикального скролла */
+    height: 0px; /* высота для горизонтального скролла */
+    background-color: #212529;
+}
+
+.slide_holder > .slide{
+    flex-flow: row nowrap;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: center;
+    flex: none;
+}
+
+.slide_holder > .slide:not(:first-child){
+    box-shadow: -0.5px 0 1px -0.5px #fff inset,
+    -1px 0 2px -1px #fff inset,
+    -2.5px 0 5px -2.5px #fff inset,
+    -5.5px 0 11px -5.5px #4230b3 inset,
+    -10px 0 20px -10px #4230b3 inset,
+    -15px 0 30px -15px #4230b3 inset,
+    -27.5px 0 55px -27.5px #4230b3 inset,
+    -40px 0px 80px -40px #4230b3 inset,
+    0.5px 0 1px -0.5px #fff inset,
+    1px 0 2px -1px #fff inset,
+    2.5px 0 5px -2.5px #fff inset,
+    5.5px 0 11px -5.5px #4230b3 inset,
+    10px 0 20px -10px #4230b3 inset,
+    15px 0 30px -15px #4230b3 inset,
+    27.5px 0 55px -27.5px #4230b3 inset,
+    40px 0px 80px -40px #4230b3 inset;
+}
+
+.slide_holder > .slide:first-child{
+    box-shadow: -0.5px 0 1px -0.5px #fff inset,
+    -1px 0 2px -1px #fff inset,
+    -2.5px 0 5px -2.5px #fff inset,
+    -5.5px 0 11px -5.5px #4230b3 inset,
+    -10px 0 20px -10px #4230b3 inset,
+    -15px 0 30px -15px #4230b3 inset,
+    -27.5px 0 55px -27.5px #4230b3 inset,
+    -40px 0px 80px -40px #4230b3 inset !important;
+}
+
+.slide_holder > .slide:last-child{
+    box-shadow: 0.5px 0 1px -0.5px #fff inset,
+    1px 0 2px -1px #fff inset,
+    2.5px 0 5px -2.5px #fff inset,
+    5.5px 0 11px -5.5px #4230b3 inset,
+    10px 0 20px -10px #4230b3 inset,
+    15px 0 30px -15px #4230b3 inset,
+    27.5px 0 55px -27.5px #4230b3 inset,
+    40px 0px 80px -40px #4230b3 inset !important;
+}
+
+
+.carousel > .l_arrow,.r_arrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;*/
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    /*display: inline-block;*/
+
+    font-size: 70px;
+    background: #abacae;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    text-shadow:
+            0 0 1px #fff,
+            0 0 2px #fff,
+            0 0 5px #fff;
+}
+
+.carousel > .r_arrow{
+    right: 0;
+}
+
+
+
+.carousel > .l_arrow label,.carousel > .r_arrow label{
+    cursor: pointer;
+}
+
+.carousel > .l_arrow label:hover,.carousel > .r_arrow label:hover{
+    animation: flicker_arrow 1.5s infinite alternate;
+}
+
+@keyframes flicker_arrow {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 1px #fff,
+                0 0 2px #fff,
+                0 0 5px #fff,
+                0 0 11px #4230b3,
+                0 0 20px #4230b3,
+                0 0 30px #4230b3,
+                0 0 55px #4230b3,
+                0 0 80px #4230b3;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+
+
+
+@media (max-width: 575.98px) {
+
+    .l_arrow,.r_arrow{
+        display: none!important;
+    }
+
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .l_arrow,.r_arrow{
+        display: none!important;
+    }
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .l_arrow,.r_arrow{
+        width: 10%;
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .l_arrow,.r_arrow{
+        width: 12.5%;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+
+    .l_arrow,.r_arrow{
+        width: 15%;
+    }
+
+}

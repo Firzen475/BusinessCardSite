@@ -1,0 +1,243 @@
+version: "3.3"
+services:
+  apache2:
+    build:
+      context: ./apache2
+      dockerfile: Dockerfile
+    image: apache2
+    container_name: apache2
+#    entrypoint: env
+#    environment:
+#      - TEST="123"
+#    env_file:
+#      - secret.env
+#    container_name: test
+    ports:
+      - 8000:80
+      - 8100:81
+      - 8200:82
+      - 8300:83
+      - 4430:443
+      - 4440:444
+      - 4450:445
+      - 4460:446
+    volumes:
+      - /BusinessCardSite/res/www/:/var/www/html
+      - /BusinessCardSite/res/ssl/:/etc/ssl/common
+      - /BusinessCardSite/res/docker_apache_log/:/var/log/apache2
+      - nfs-share:/share/
+      - nfs-data:/mnt/NFS
+      - /home/user/.ssh:/.ssh/
+    networks:
+      # you may set custom IP addresses
+      front:
+        ipv4_address: 172.16.238.10 
+#    entrypoint: env
+    environment:
+      - HTTP_PORT=8000
+      - HTTPS_PORT=4430
+      - HTTPS_PORT_TEST_1=4440
+      - HTTPS_PORT_TEST_2=4450
+      - HTTPS_PORT_TEST_3=4460
+    restart: always
+    depends_on:
+       pgsql:
+         condition: service_healthy
+       pgadmin:
+         condition: service_healthy
+       ftp:
+         condition: service_healthy
+
+
+  pgsql:
+    build: 
+      context: ./pgsql
+      dockerfile: Dockerfile
+      args:
+        - TZ=${TZ_VALUE}
+        - LANG=${LANG_VALUE}
+        - SHEDULE=* * * * *
+    image: pgsql
+    container_name: pgsql
+#    command: '-c config_file=/etc/postgresql/${PG_VERSION}/main/postgresql.conf'
+    env_file: ./.env
+    environment:
+      - CLEAR_DB=false
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+#      - POSTGRES_USER=
+#      - POSTGRES_DB=
+      - POSTGRES_INITDB_ARGS=--wal-segsize=32
+#      - POSTGRES_INITDB_WALDIR=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - pg-init:/docker-entrypoint-initdb.d
+      - pg-backup:/BACKUP
+      - pg-cron:/cron
+      - /home/user/.ssh:/.ssh/:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d postgres -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 50
+    networks:
+      front:
+        ipv4_address: 172.16.238.11
+    restart: always
+
+  cron:
+    build:
+      context: ./cron
+      dockerfile: Dockerfile
+      args:
+        - TZ=${TZ_VALUE}
+        - LANG=${LANG_VALUE}
+    image: cron
+    container_name: cron
+    env_file: ./.env
+    volumes:
+      - pg-cron:/cron:ro
+      - /home/user/.ssh:/.ssh/:ro
+#    healthcheck:
+#      test: ["CMD-SHELL", "pg_isready -d postgres -U postgres" ]
+#      interval: 5s
+#      timeout: 5s
+#      retries: 50
+    networks:
+      front:
+        ipv4_address: 172.16.238.12
+    restart: always
+
+
+  pgadmin:
+    build:
+      context: ./pgadmin
+      dockerfile: Dockerfile
+    image: pgadmin
+    container_name: pgadmin
+#    ports:
+#      - 9998:5050
+    networks:
+      front:
+        ipv4_address: 172.16.238.13
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_LOGIN_AS_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+      - PG_PASSWORD=${PG_PASSWORD}
+    volumes:
+      - /home/user/.ssh:/.ssh/:ro
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://127.0.0.1:5050" ]
+      interval: 5s
+      timeout: 5s
+      retries: 50
+      start_period: 10s
+    restart: always
+    depends_on:
+       pgsql:
+         condition: service_healthy
+
+  tracks:
+    build:
+      context: ./tracks
+      dockerfile: Dockerfile
+    image: tracks
+    container_name: tracks
+    env_file: ./.env
+    environment:
+      # These are set in script/ci-build, so we need to pass-thru them.
+      DATABASE_PASSWORD_EMPTY: 0
+      RAILS_ENV: $RAILS_ENV
+      DATABASE_NAME: $DATABASE_NAME
+      DATABASE_HOST: $DATABASE_HOST
+      DATABASE_PORT: $DATABASE_PORT
+      DATABASE_USERNAME: $DATABASE_USERNAME
+      DATABASE_PASSWORD: ${PG_PASSWORD}
+      DATABASE_TYPE: $DATABASE_TYPE
+      DATABASE_ENCODING: $DATABASE_ENCODING
+    ports:
+      - 3000:3000
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://tracks:3000" ]
+      interval: 5s
+      timeout: 5s
+      retries: 50
+      start_period: 10s
+    restart: always
+    networks:
+      front:
+        ipv4_address: 172.16.238.20
+    depends_on:
+      - pgsql
+
+  ftp:
+    build:
+      context: ./ftp
+      dockerfile: Dockerfile
+    image: ftp
+    container_name: ftp
+    ports:
+      - 0.0.0.0:20:20
+      - 0.0.0.0:21:21
+    volumes:
+      - /home/user/.ssh:/.ssh/:ro
+      - /etc/ssl/resource:/root/ssl/:ro
+      - nfs-share:/share/
+    healthcheck:
+      test: [ "CMD", "/root/healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      retries: 50
+      start_period: 10s
+    restart: always
+    networks:
+      front:
+        ipv4_address: 172.16.238.21
+
+volumes:
+   nfs-share:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/share"
+   nfs-data:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/"
+   pg-data:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/PGSQL/DATA"
+   pg-init:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/PGSQL/INIT"
+   pg-backup:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/PGSQL/BACKUP"
+   pg-cron:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: nfsvers=4,addr=192.168.2.1,nolock,soft,rw
+        device: ":/PGSQL/CRON"
+
+networks:
+    front:
+        # use the bridge driver, but enable IPv6
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.238.0/24
+                #gateway: 172.16.238.1

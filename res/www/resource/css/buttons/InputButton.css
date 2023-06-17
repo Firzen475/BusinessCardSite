@@ -1,0 +1,235 @@
+
+
+
+.input_simple{
+    --input_box_shadow: inset 0 0 3px 1px #fff,
+    0 0 2px 2px #fff,
+    3px -3px 15px #1beabd,
+    -3px 3px 15px #10abff;
+}
+
+.input_error{
+    --input_box_shadow: inset 0 0 3px 1px #933,
+    0 0 2px 2px #933,
+    3px -3px 15px #1beabd,
+    -3px 3px 15px #10abff;
+}
+
+.input_button {
+
+
+position:relative;
+
+
+
+    height: 100%;
+    align-self: center;
+    justify-self: stretch;
+   /* background-image: linear-gradient(21deg, #10abff, #1beabd);
+    box-sizing: border-box;
+    background-clip: content-box;*/
+
+    background-color: rgba(255, 255, 255, 0);
+
+display: flex;
+    margin: auto;
+
+border-radius: 9999em;
+
+
+
+
+}
+
+.input_button_error{
+    background-color: rgba(150, 0, 0, 0.1);
+}
+
+.input_button input {
+    position: relative;
+    display: inherit;
+    width: auto;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-filter:drop-shadow(0 0 3px #aaaaaa);
+    margin: 2px;
+    z-index: 1;
+
+}
+
+.input_button input:not(:disabled) ~ .t1::before{
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    padding: 0px;
+    margin: 0;
+    border-radius: 9999em;
+    border: none;
+    /*border: 4px solid transparent;*/
+    /*background: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) border-box;
+    -webkit-mask: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) padding-box, linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;*/
+    /*-webkit-filter: drop-shadow( 3px -3px 30px #1beabd);
+    filter        : drop-shadow(3px -3px 30px #1beabd);*/
+    box-shadow: var(--input_box_shadow);
+    /*box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1.75);*/
+    -webkit-animation: Test2 1s ease 1;
+    -moz-animation: Test2 1s ease 1;
+    animation: Test2 1s ease 1;
+    pointer-events: none;
+
+    /*background-image: linear-gradient(21deg, #10abff, #1beabd);
+    background-clip: padding-box;*/
+
+
+
+}
+
+.input_button input:not(:disabled):focus ~ .t1::before{
+    content: "";
+    position: absolute;
+    opacity: 1;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    /*border: 4px solid transparent;*/
+    /*background: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) border-box;
+    -webkit-mask: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) padding-box, linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;*/
+    /*-webkit-filter: drop-shadow( 3px -3px 30px #1beabd);
+    filter        : drop-shadow(3px -3px 30px #1beabd);*/
+    box-shadow: var(--input_box_shadow);
+    /*box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1.75);*/
+    -webkit-animation: Test11 1s ease 1;
+    -moz-animation: Test1 1s ease 1;
+    animation: Test1 1s ease 1;
+    pointer-events: none;
+}
+
+.input_button input:not(:disabled):focus {
+    animation: flicker_shadow 1.5s infinite alternate;
+}
+
+
+.input_button input:disabled:hover{
+    color: #FFFFFF;
+    -webkit-filter:drop-shadow(0 0 6px #ffffff);
+    cursor: pointer;
+}
+
+
+
+/*.input_button > .t2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    box-sizing: border-box;
+    background-clip: initial;
+    padding: 2px;
+    margin: auto;
+
+    border-radius: 9999em;
+}*/
+
+
+
+
+/*.input_button span {
+
+    transform: scale(.993, .94);
+transition: transform .5s, opacity .25s;
+    opacity: 0;
+
+position:absolute;
+    z-index: 0;
+margin:4px;
+left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    border-radius: inherit;
+    pointer-events: none;
+
+
+
+}*/
+
+
+
+
+
+/*.input_button::before + .input_button > input:not(disabled){
+    content: "";
+    position: absolute;
+    opacity: 1;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) border-box;
+    -webkit-mask: linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba) padding-box, linear-gradient(144deg,#8330bf, #4230b3 50%,#00aeba);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    /*-webkit-filter: drop-shadow( 3px -3px 30px #1beabd);
+    filter        : drop-shadow(3px -3px 30px #1beabd);
+    box-shadow: /*inset 0 0 0 3px #fff,
+            0 0 2px 2px #fff;
+    /*box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1.75);
+    -webkit-animation: Test 1s ease 1;
+    -moz-animation: Test 1s ease 1;
+    animation: Test 1s ease 1;
+}*/
+
+
+@-webkit-keyframes Test1 {
+    0%{opacity: 0.5;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 1;}
+}
+@-moz-keyframes Test1 {
+    0%{opacity: 0.5;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 1;}
+}
+@keyframes Test1 {
+    0%{opacity: 0.5;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 1;}
+}
+
+@-webkit-keyframes Test2 {
+    0%{opacity: 1;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 0.5;}
+}
+@-moz-keyframes Test2 {
+    0%{opacity: 1;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 0.5;}
+}
+@keyframes Test2 {
+    0%{opacity: 1;}
+    /*50%{opacity: 0.5;}*/
+    100%{opacity: 0.5;}
+}

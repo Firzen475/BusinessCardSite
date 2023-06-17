@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  ftp:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ftp
+    container_name: ftp
+    ports:
+      - 0.0.0.0:20:20
+      - 0.0.0.0:21:21
+    volumes:
+      - /home/user/.ssh:/.ssh/:ro
+      - /etc/ssl/resource:/root/ssl/:ro
+#      - 47400-47470:47400-47470
+    healthcheck:
+#      test: [ "CMD-SHELL", "curl --fail http://tracks:3000" ]
+      test: [ "CMD", "/root/healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      retries: 50
+      start_period: 10s
+#    restart: always

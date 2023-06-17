@@ -1,0 +1,161 @@
+
+.title_text{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color:rgba(255,255,255,.5);
+}
+
+.simple_text, .simple_text p , .simple_text input , .simple_text table *{
+
+    font-family: Comic Sans MS, Comic Sans, sans-serif;
+    color:rgba(255,255,255,.5);
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.button_text, .button_text *{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.navigation_text a{
+    font-family: Comic Sans MS, Comic Sans, serif;
+    color:rgba(255,255,255,.5);
+    font-weight: 700;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.table_text{
+    font-family: Comic Sans MS, Comic Sans, serif;
+    color:rgba(255,255,255,.5);
+}
+
+.bash_text{
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace !important;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.cursive{
+    font-style: italic;
+}
+
+
+
+
+
+@media (max-width: 575.98px) {
+
+    .title_text{
+        font-size: small;
+    }
+
+    .simple_text{
+        font-size: small;
+    }
+
+    .button_text{
+        font-size: medium;
+    }
+
+    .navigation_text{
+        font-size: small;
+    }
+
+    .table_text{
+        font-size: small;
+    }
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .title_text, .title_text *{
+        font-size: small;
+    }
+
+    .simple_text{
+        font-size: small;
+    }
+
+    .button_text{
+        font-size: medium;
+    }
+
+    .navigation_text{
+        font-size: small;
+    }
+
+    .table_text{
+        font-size: small;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .title_text{
+        font-size: medium;
+    }
+
+    .simple_text{
+        font-size: medium;
+    }
+
+    .button_text{
+        font-size: medium;
+    }
+
+    .navigation_text{
+        font-size: medium;
+    }
+
+    .table_text{
+        font-size: medium;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .title_text{
+        font-size: medium;
+    }
+
+    .simple_text{
+        font-size: medium;
+    }
+
+    .button_text{
+        font-size: medium;
+    }
+
+    .navigation_text{
+        font-size: medium;
+    }
+
+    .table_text{
+        font-size: medium;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .title_text, .title_text *{
+        font-size: medium;
+    }
+
+    .simple_text,  .simple_text *{
+        font-size: medium;
+    }
+
+    .button_text, .button_text *{
+        font-size: medium;
+    }
+
+    .navigation_text, .navigation_text *{
+        font-size: medium;
+    }
+
+    .table_text, .table_text *{
+        font-size: medium;
+    }
+}

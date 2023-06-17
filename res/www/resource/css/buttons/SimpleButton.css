@@ -1,0 +1,131 @@
+
+.sb_color_normal {
+    --color-gradient: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+
+.sb_color_warn {
+    --color-gradient: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#F34242)!important;
+}
+
+.sb_color_accept {
+    --color-gradient: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00EB55)!important;
+}
+
+.sb_size_normal{
+    --span_size: 5px 15px 5px 15px;
+}
+
+.sb_size_slim{
+    --span_size: 2px 5px 2px 5px;
+}
+
+.button{
+    position: relative;
+    border: none;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.0);
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+.button > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin: var(--span_size);
+    background-image: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+
+.button .span_blur {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    bottom: 0;
+    right: 15px;
+    left: 15px;
+    filter: blur(3px);
+    background-image: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+button:hover .neon{
+    filter: blur(6px);
+}
+
+button:hover .border{
+    filter: blur(2px);
+}
+
+button:hover .span_blur{
+    filter: blur(2px);
+}
+
+button:hover .neon::before {
+    /*border: 15px solid transparent;*/
+    background: var(--color-gradient) border-box;
+    -webkit-mask: var(--color-gradient) padding-box, var(--color-gradient);
+}
+
+button:hover .border::before{
+    background: var(--color-gradient) border-box;
+    -webkit-mask: var(--color-gradient) padding-box, var(--color-gradient);
+
+}
+
+.border{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100% ;
+    filter: blur(1px);
+}
+
+.border::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background: var(--color-gradient) border-box;
+    -webkit-mask: var(--color-gradient) padding-box, var(--color-gradient);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.neon{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(3px);
+}
+
+.neon::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background: var(--color-gradient) border-box;
+    -webkit-mask: var(--color-gradient) padding-box, var(--color-gradient);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+
+

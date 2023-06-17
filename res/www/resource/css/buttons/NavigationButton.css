@@ -1,0 +1,77 @@
+.navigation_text .navigation-link {
+    overflow: hidden;
+    /*color: #fff;*/
+    padding: .25rem 0;
+    padding-inline: 2px;
+    text-decoration: none;
+    position: relative;
+    cursor:pointer;
+    z-index: 150;
+}
+
+
+.navigation_text .navigation-link:not(.active) {
+    background: linear-gradient(135deg,#abacae 0%,#abacae 40%,#ffffff 45%,#ffffff 55%,#abacae 60%,#abacae 100%);
+    background-size: 240% 200%;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    text-shadow: none;
+    -webkit-filter:drop-shadow(0 0 3px #aaaaaa);
+
+}
+
+.navigation_text .navigation-link:hover:not(.active) {
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+.navigation_text .active {
+    text-shadow:
+            0 0 1px #fff,
+            0 0 2px #fff,
+            0 0 5px #fff,
+            0 0 11px #4230b3,
+            0 0 20px #4230b3,
+            0 0 30px #4230b3,
+            0 0 55px #4230b3,
+            0 0 80px #4230b3;
+    color: #fff;
+}
+
+.navigation_text .active:hover {
+    animation: flicker_shadow 1.5s infinite alternate;
+}
+
+@keyframes flicker_shadow {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 1px #fff,
+                0 0 2px #fff,
+                0 0 5px #fff,
+                0 0 11px #4230b3,
+                0 0 20px #4230b3,
+                0 0 30px #4230b3,
+                0 0 55px #4230b3,
+                0 0 80px #4230b3;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
